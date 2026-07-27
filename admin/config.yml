@@ -1,0 +1,268 @@
+---
+# ============================================================
+# Decap CMS configuration for the AURELIA website.
+#
+# Auth is handled by DecapBridge (https://decapbridge.com) instead of the
+# deprecated Netlify Identity/Git Gateway. Two lines below need YOUR values,
+# filled in after you register this site at decapbridge.com — see
+# DEPLOYMENT.md for the full walkthrough:
+#   1. repo:        your GitHub "owner/repo-name"
+#   2. identity_url: the URL DecapBridge gives you for this site
+# Everything else in this file works as-is.
+# ============================================================
+
+backend:
+  name: git-gateway
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   # <-- replace with your actual GitHub repo
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/YOUR_SITE_ID   # <-- replace with the URL DecapBridge gives you
+  gateway_url: https://gateway.decapbridge.com
+
+# Staff edits are published straight to the branch above (no draft/review
+# step). To require a review before changes go live, change this to
+# "editorial_workflow" — see DEPLOYMENT.md for what else that requires.
+publish_mode: simple
+
+media_folder: "images/uploads"   # staff-uploaded photos are committed here
+public_folder: "/images/uploads"
+
+site_url: https://YOUR-SITE-NAME.netlify.app   # <-- replace with your live Netlify URL, used for CMS "Preview" links
+display_url: https://YOUR-SITE-NAME.netlify.app
+
+locale: "en"
+
+collections:
+  # ---------------------------------------------------------
+  # Site Settings — singleton content (one file each), for the
+  # stuff that isn't a "list of things": restaurant info, the
+  # hero banner, the About section, and every section's
+  # heading/subheading text.
+  # ---------------------------------------------------------
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "restaurant"
+        label: "Restaurant Info"
+        file: "content/settings/restaurant.json"
+        fields:
+          - { label: "Restaurant Name", name: "name", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string", hint: "Shown as typed, e.g. +1 (555) 284-9910" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address (full, as displayed)", name: "address", widget: "string" }
+          - { label: "Map Search Text", name: "mapQuery", widget: "string", hint: "What's used to look up the embedded Google Map — usually the same as the address" }
+          - label: "Opening Hours"
+            name: "hours"
+            widget: "list"
+            fields:
+              - { label: "Days", name: "day", widget: "string", hint: "e.g. Monday – Thursday" }
+              - { label: "Time", name: "time", widget: "string", hint: "e.g. 5:30 PM – 10:00 PM" }
+          - { label: "Capacity Blurb", name: "capacity", widget: "text" }
+          - { label: "Dress Code", name: "dressCode", widget: "text" }
+          - { label: "Reservation Policy", name: "policy", widget: "text" }
+          - { label: "Footer Blurb", name: "footerBlurb", widget: "text" }
+          - { label: "Newsletter Blurb", name: "newsletterBlurb", widget: "text" }
+          - { label: "Copyright Line", name: "copyrightLine", widget: "string" }
+          - label: "Social Links"
+            name: "socialLinks"
+            widget: "object"
+            fields:
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "TikTok URL", name: "tiktok", widget: "string", required: false }
+              - { label: "X / Twitter URL", name: "twitter", widget: "string", required: false }
+
+      - name: "hero"
+        label: "Hero Banner"
+        file: "content/settings/hero.json"
+        fields:
+          - { label: "Eyebrow (small text above title)", name: "eyebrow", widget: "string" }
+          - { label: "Title — Line 1", name: "titleLine1", widget: "string" }
+          - { label: "Title — Line 2", name: "titleLine2", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Primary Button Text", name: "primaryCtaText", widget: "string", hint: "Links to the Menu section" }
+          - { label: "Secondary Button Text", name: "secondaryCtaText", widget: "string", hint: "Links to the Reservation section" }
+          - { label: "Background Photo", name: "backgroundImage", widget: "image" }
+
+      - name: "about"
+        label: "About Section"
+        file: "content/settings/about.json"
+        fields:
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
+          - { label: "Heading — Line 2", name: "headingLine2", widget: "string" }
+          - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+          - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+          - { label: "Main Photo", name: "mainImage", widget: "image" }
+          - { label: "Small Overlapping Photo", name: "chefImage", widget: "image" }
+          - { label: "Years Experience", name: "statYears", widget: "number" }
+          - { label: "Happy Guests", name: "statGuests", widget: "number" }
+          - { label: "Signature Dishes Count", name: "statDishes", widget: "number" }
+          - { label: "Customer Rating (e.g. 4.9)", name: "statRating", widget: "number", value_type: "float" }
+
+      - name: "sections"
+        label: "Section Headings"
+        file: "content/settings/sections.json"
+        fields:
+          - label: "Featured Menu"
+            name: "menu"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtext", name: "subtext", widget: "text" }
+          - label: "Signature Dishes"
+            name: "signatureDishes"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtext", name: "subtext", widget: "text" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Reservation"
+            name: "reservation"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Background Photo", name: "backgroundImage", widget: "image" }
+          - label: "Why Choose Us"
+            name: "whyChooseUs"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "heading", widget: "string" }
+
+      - name: "menu_categories"
+        label: "Menu Categories"
+        file: "content/settings/menu-categories.json"
+        fields:
+          - label: "Categories (in display order)"
+            name: "categories"
+            widget: "list"
+            hint: "The order here is the order the tabs appear in on the Menu section. If you rename or add a category, also update the Category dropdown on each menu item below to match."
+
+  # ---------------------------------------------------------
+  # Menu Items
+  # ---------------------------------------------------------
+  - name: "menu_items"
+    label: "Menu Items"
+    folder: "content/menu-items"
+    create: true
+    slug: "{{fields.id}}"
+    identifier_field: "name"
+    summary: "{{name}} — {{category}}"
+    sortable_fields: ["order", "category", "name", "price"]
+    fields:
+      - { label: "Internal ID (unique, no spaces)", name: "id", widget: "string", pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, and hyphens only"] }
+      - { label: "Display Order (within its category)", name: "order", widget: "number", default: 1 }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        hint: "Must exactly match one of the categories in Site Settings → Menu Categories"
+        options: ["Starters", "Main Courses", "Seafood", "Steaks", "Pasta", "Desserts", "Drinks", "Signature Specials"]
+      - { label: "Dish Name", name: "name", widget: "string" }
+      - { label: "Description", name: "desc", widget: "text" }
+      - { label: "Price (USD, no $ sign)", name: "price", widget: "number", value_type: "float" }
+      - { label: "Mark as Popular", name: "popular", widget: "boolean", default: false }
+      - { label: "Photo", name: "img", widget: "image" }
+
+  # ---------------------------------------------------------
+  # Signature Dishes
+  # ---------------------------------------------------------
+  - name: "signature_dishes"
+    label: "Signature Dishes"
+    folder: "content/signature-dishes"
+    create: true
+    slug: "{{fields.id}}"
+    identifier_field: "name"
+    sortable_fields: ["order", "name"]
+    fields:
+      - { label: "Internal ID (unique, no spaces)", name: "id", widget: "string", pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, and hyphens only"] }
+      - { label: "Display Order", name: "order", widget: "number", default: 1 }
+      - { label: "Dish Name", name: "name", widget: "string" }
+      - { label: "Description", name: "desc", widget: "text" }
+      - { label: "Ingredients (comma-separated)", name: "ingredients", widget: "string" }
+      - { label: "Price (USD, no $ sign)", name: "price", widget: "number", value_type: "float" }
+      - { label: "Photo", name: "img", widget: "image" }
+
+  # ---------------------------------------------------------
+  # Gallery
+  # ---------------------------------------------------------
+  - name: "gallery"
+    label: "Gallery Photos"
+    folder: "content/gallery"
+    create: true
+    slug: "{{fields.id}}"
+    identifier_field: "caption"
+    sortable_fields: ["order", "caption", "cat"]
+    fields:
+      - { label: "Internal ID (unique, no spaces)", name: "id", widget: "string", pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, and hyphens only"] }
+      - { label: "Display Order", name: "order", widget: "number", default: 1 }
+      - { label: "Category Label", name: "cat", widget: "string", hint: "Shown on hover, e.g. Interior, Dishes, Chef, Cocktails" }
+      - { label: "Caption", name: "caption", widget: "string" }
+      - { label: "Photo", name: "img", widget: "image" }
+
+  # ---------------------------------------------------------
+  # Testimonials
+  # ---------------------------------------------------------
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "content/testimonials"
+    create: true
+    slug: "{{fields.id}}"
+    identifier_field: "name"
+    sortable_fields: ["order", "date", "rating"]
+    fields:
+      - { label: "Internal ID (unique, no spaces)", name: "id", widget: "string", pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, and hyphens only"] }
+      - { label: "Display Order", name: "order", widget: "number", default: 1 }
+      - { label: "Guest Name", name: "name", widget: "string" }
+      - { label: "Rating (1–5)", name: "rating", widget: "number", min: 1, max: 5, default: 5 }
+      - { label: "Date (as displayed, e.g. June 2026)", name: "date", widget: "string" }
+      - { label: "Review Text", name: "text", widget: "text" }
+      - { label: "Guest Photo (optional)", name: "avatar", widget: "image", required: false }
+
+  # ---------------------------------------------------------
+  # Why Choose Us — feature cards
+  # ---------------------------------------------------------
+  - name: "features"
+    label: "Why Choose Us — Feature Cards"
+    folder: "content/features"
+    create: true
+    slug: "{{fields.id}}"
+    identifier_field: "title"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { label: "Internal ID (unique, no spaces)", name: "id", widget: "string", pattern: ['^[a-z0-9-]+$', "Lowercase letters, numbers, and hyphens only"] }
+      - { label: "Display Order", name: "order", widget: "number", default: 1 }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "desc", widget: "text" }
+      - label: "Icon"
+        name: "icon"
+        widget: "select"
+        options:
+          - { label: "Leaf (ingredients/freshness)", value: "leaf" }
+          - { label: "Award/Medal", value: "award" }
+          - { label: "Ambience (circle+cross)", value: "ambience" }
+          - { label: "Wine Glass", value: "wine" }
+          - { label: "Service (person)", value: "service" }
+          - { label: "Produce (leaf+stem)", value: "produce" }
+          - { label: "Star", value: "star" }
+          - { label: "Sparkle", value: "sparkle" }

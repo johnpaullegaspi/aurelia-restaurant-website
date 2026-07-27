@@ -1,0 +1,44 @@
+[
+  {
+    "id": "f1",
+    "order": 1,
+    "title": "Fresh Ingredients",
+    "desc": "Sourced daily from trusted purveyors and prepared the same day for peak freshness.",
+    "icon": "leaf"
+  },
+  {
+    "id": "f2",
+    "order": 2,
+    "title": "Award-Winning Chef",
+    "desc": "Led by Chef Marchetti, recipient of three regional culinary excellence awards.",
+    "icon": "award"
+  },
+  {
+    "id": "f3",
+    "order": 3,
+    "title": "Cozy Ambience",
+    "desc": "Warm lighting, curated music, and thoughtfully designed rooms for every occasion.",
+    "icon": "ambience"
+  },
+  {
+    "id": "f4",
+    "order": 4,
+    "title": "Premium Wines",
+    "desc": "An award-winning cellar of over 300 labels, curated by our in-house sommelier.",
+    "icon": "wine"
+  },
+  {
+    "id": "f5",
+    "order": 5,
+    "title": "Excellent Service",
+    "desc": "A dedicated team trained to anticipate every detail of your evening.",
+    "icon": "service"
+  },
+  {
+    "id": "f6",
+    "order": 6,
+    "title": "Locally Sourced Produce",
+    "desc": "Partnering with regional farms to bring seasonal, sustainable ingredients to your table.",
+    "icon": "produce"
+  }
+]

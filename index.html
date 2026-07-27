@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURELIA — Fine Dining Restaurant | A Modern Culinary Journey</title>
+<meta name="description" content="AURELIA is a modern fine dining restaurant offering an unforgettable culinary journey — seasonal ingredients, award-winning cuisine, and an elegant atmosphere. Reserve your table today.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141210'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%23D8B889' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AURELIA — Fine Dining Restaurant">
+<meta property="og:description" content="A modern culinary journey. Seasonal ingredients, award-winning cuisine, elegant atmosphere. Reserve your table today.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:site_name" content="AURELIA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AURELIA — Fine Dining Restaurant">
+<meta name="twitter:description" content="A modern culinary journey. Reserve your table today.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&h=630&q=80">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#FAF6EF', beige: '#EAE0CE', charcoal: '#26221D', charcoald: '#141210',
+          gold: '#B8935A', goldlight: '#D8B889', golddark: '#8F6F3F', line: 'rgba(184,147,90,.25)'
+        },
+        fontFamily: {
+          head: ['"Playfair Display"', 'serif'],
+          body: ['Poppins', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- GLightbox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "AURELIA",
+  "description": "A modern fine dining restaurant offering a seasonal, chef-driven culinary journey.",
+  "servesCuisine": "Modern European",
+  "priceRange": "$$$$",
+  "telephone": "+1-555-284-9910",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "412 Marchmont Lane",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10014",
+    "addressCountry": "US"
+  },
+  "openingHours": ["Mo-Th 17:30-22:00", "Fr-Sa 17:30-23:30", "Su 17:00-21:30"],
+  "sameAs": ["https://instagram.com/aurelia", "https://facebook.com/aurelia", "https://tiktok.com/@aurelia"]
+}
+</script>
+</head>
+<body class="bg-cream text-charcoal font-body">
+
+<!-- Page loader -->
+<div id="page-loader">
+  <span class="loader-mark">AURELIA</span>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header id="site-nav" class="site-nav text-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between">
+    <a href="#home" class="nav-logo font-head text-2xl md:text-[26px] tracking-[0.15em]" data-site-name>AURELIA</a>
+
+    <nav class="hidden lg:flex items-center gap-9 font-body text-[13px] tracking-[0.04em]" aria-label="Primary">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#reservation" class="nav-link">Reservation</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="#reservation" class="btn btn-gold hidden md:inline-flex !py-2.5 !px-5 !text-[11px]">Reserve a Table</a>
+      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-11 h-11 -mr-2.5 hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div id="mobile-scrim" class="mobile-scrim"></div>
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile">
+  <div class="flex flex-col h-full px-8 pt-28 pb-10 text-white">
+    <a href="#home" class="py-4 border-b border-white/10 font-head text-xl">Home</a>
+    <a href="#about" class="py-4 border-b border-white/10 font-head text-xl">About</a>
+    <a href="#menu" class="py-4 border-b border-white/10 font-head text-xl">Menu</a>
+    <a href="#gallery" class="py-4 border-b border-white/10 font-head text-xl">Gallery</a>
+    <a href="#testimonials" class="py-4 border-b border-white/10 font-head text-xl">Testimonials</a>
+    <a href="#reservation" class="py-4 border-b border-white/10 font-head text-xl">Reservation</a>
+    <a href="#contact" class="py-4 border-b border-white/10 font-head text-xl">Contact</a>
+    <a href="#reservation" class="btn btn-gold w-full mt-8 justify-center">Reserve a Table</a>
+  </div>
+</nav>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="home" class="hero flex items-center justify-center text-center">
+  <div id="hero-bg" class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&h=1200&q=80')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+  <div class="float-el bg-goldlight w-72 h-72" style="top:14%;left:8%"></div>
+  <div class="float-el bg-gold w-64 h-64" style="bottom:18%;right:10%;animation-delay:3s"></div>
+
+  <div class="relative px-6 max-w-3xl mx-auto">
+    <p id="hero-eyebrow" class="eyebrow text-goldlight opacity-0" style="opacity:0;transform:translateY(16px);color:var(--c-gold-light)">Fine Dining &middot; Est. 2011</p>
+    <h1 id="hero-title" class="font-head text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mt-5" style="opacity:0;transform:translateY(24px)">Elevate Every<br>Evening</h1>
+    <p id="hero-desc" class="text-white/85 text-sm md:text-base max-w-xl mx-auto mt-6 leading-relaxed" style="opacity:0;transform:translateY(20px)">A modern culinary journey rooted in seasonal ingredients, quiet craftsmanship, and gracious hospitality. Welcome to AURELIA.</p>
+    <div id="hero-ctas" class="flex flex-wrap items-center justify-center gap-4 mt-9" style="opacity:0;transform:translateY(20px)">
+      <a href="#menu" id="hero-cta-primary" class="btn btn-outline-light">View Menu</a>
+      <a href="#reservation" id="hero-cta-secondary" class="btn btn-gold">Reserve a Table</a>
+    </div>
+  </div>
+
+  <div id="scroll-indicator" class="scroll-indicator" style="opacity:0">
+    <span class="mouse"></span>
+    <span class="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <div class="relative" data-aos="fade-right">
+      <div class="rounded overflow-hidden aspect-[4/5] shadow-2xl bg-beige">
+        <img id="about-main-img" src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&h=1125&q=80" alt="AURELIA's elegant dining room interior" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="hidden md:block absolute -bottom-8 -right-8 w-48 rounded overflow-hidden shadow-2xl border-4 border-cream bg-beige">
+        <img id="about-chef-img" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=500&h=625&q=80" alt="Chef Marchetti plating a signature dish" class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <p id="about-eyebrow" class="eyebrow">Our Story</p>
+      <h2 id="about-heading" class="font-head text-3xl md:text-5xl mt-4 mb-6 leading-tight">Where Craft Meets<br>Quiet Elegance</h2>
+      <p id="about-para1" class="text-charcoal/65 leading-relaxed mb-4">Founded in 2011 by Chef Antoine Marchetti, AURELIA began as a single idea: that fine dining should feel both extraordinary and effortless. Every dish on our menu is built around the season's finest ingredients, sourced from farms and purveyors we've partnered with for over a decade.</p>
+      <p id="about-para2" class="text-charcoal/65 leading-relaxed mb-8">Chef Marchetti trained in Lyon and Tokyo before bringing his refined, ingredient-first philosophy to New York. Today, his kitchen blends classical French technique with modern restraint — nothing on the plate without purpose, nothing missing that should be there.</p>
+
+      <div class="grid grid-cols-2 gap-6 mb-10">
+        <div>
+          <p class="stat-num"><span id="stat-years" class="counter" data-target="15" data-suffix="+">0</span></p>
+          <p class="text-xs uppercase tracking-widest text-charcoal/50 mt-1">Years Experience</p>
+        </div>
+        <div>
+          <p class="stat-num"><span id="stat-guests" class="counter" data-target="20000" data-suffix="+">0</span></p>
+          <p class="text-xs uppercase tracking-widest text-charcoal/50 mt-1">Happy Guests</p>
+        </div>
+        <div>
+          <p class="stat-num"><span id="stat-dishes" class="counter" data-target="100" data-suffix="+">0</span></p>
+          <p class="text-xs uppercase tracking-widest text-charcoal/50 mt-1">Signature Dishes</p>
+        </div>
+        <div>
+          <p class="stat-num"><span id="stat-rating" class="counter" data-target="4.9" data-decimals="1" data-suffix="★">0</span></p>
+          <p class="text-xs uppercase tracking-widest text-charcoal/50 mt-1">Customer Rating</p>
+        </div>
+      </div>
+
+      <a href="#reservation" class="btn btn-outline-dark">Reserve a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED MENU ============ -->
+<section id="menu" class="py-24 md:py-32 px-5 md:px-8 bg-beige/40">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="menu-eyebrow" class="eyebrow">Featured Menu</p>
+      <h2 id="menu-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">Seasonal &amp; Signature</h2>
+      <div class="divider-gold"></div>
+      <p id="menu-subtext" class="text-charcoal/60 mt-5 leading-relaxed">A curated selection from our full menu — crafted daily with the season's finest ingredients.</p>
+    </div>
+
+    <div id="menu-tabs" class="flex items-center justify-start md:justify-center gap-7 overflow-x-auto no-scrollbar mb-12 border-b border-line pb-1" data-aos="fade-up"></div>
+
+    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7"></div>
+
+    <p class="text-center text-xs text-charcoal/40 mt-10">Consuming raw or undercooked meats, poultry, seafood, or eggs may increase your risk of foodborne illness. Please inform your server of any allergies.</p>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE DISHES ============ -->
+<section class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-16" data-aos="fade-up">
+      <p id="signature-eyebrow" class="eyebrow">Chef's Table</p>
+      <h2 id="signature-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">Signature Dishes</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div id="signature-grid"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="py-24 md:py-32 px-5 md:px-8 bg-charcoald text-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="gallery-eyebrow" class="eyebrow" style="color:var(--c-gold-light)">Gallery</p>
+      <h2 id="gallery-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">Moments at AURELIA</h2>
+      <div class="divider-gold"></div>
+      <p id="gallery-subtext" class="text-white/55 mt-5 leading-relaxed">A glimpse into our dining rooms, our kitchen, and the evenings we're proud to be part of.</p>
+    </div>
+    <div id="gallery-masonry" class="masonry"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="testimonials-eyebrow" class="eyebrow">Testimonials</p>
+      <h2 id="testimonials-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">What Our Guests Say</h2>
+      <div class="divider-gold"></div>
+    </div>
+
+    <div class="testimonials-swiper relative pb-14" data-aos="fade-up">
+      <div class="swiper-wrapper" id="testimonials-swiper-wrapper"></div>
+      <div class="testimonials-pagination flex justify-center gap-2 mt-2"></div>
+      <button class="testimonials-prev hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center z-10" aria-label="Previous testimonial">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="testimonials-next hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center z-10" aria-label="Next testimonial">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVATION ============ -->
+<section id="reservation" class="py-24 md:py-32 px-5 md:px-8 bg-charcoald text-white relative overflow-hidden">
+  <div id="reservation-bg" class="absolute inset-0 opacity-20" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&h=1200&q=80');background-size:cover;background-position:center"></div>
+  <div class="relative max-w-6xl mx-auto grid lg:grid-cols-[1.2fr_1fr] gap-14">
+    <div data-aos="fade-right">
+      <p id="reservation-eyebrow" class="eyebrow" style="color:var(--c-gold-light)">Reservation</p>
+      <h2 id="reservation-heading" class="font-head text-3xl md:text-5xl mt-4 mb-8">Book Your Table</h2>
+
+      <form id="reservation-form" class="glass-panel p-7 md:p-10 rounded-lg" novalidate>
+        <div class="grid sm:grid-cols-2 gap-x-6 gap-y-5">
+          <div class="form-field sm:col-span-2">
+            <label for="res-name">Full Name</label>
+            <input id="res-name" type="text" placeholder="Jane Doe" required>
+            <p class="field-error">Please enter your full name.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-email">Email</label>
+            <input id="res-email" type="email" placeholder="jane@email.com" required>
+            <p class="field-error">Please enter a valid email address.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-phone">Phone Number</label>
+            <input id="res-phone" type="tel" placeholder="(555) 123-4567" required>
+            <p class="field-error">Please enter a valid phone number.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-guests">Number of Guests</label>
+            <select id="res-guests" required>
+              <option value="">Select</option>
+              <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option>
+              <option>5 Guests</option><option>6 Guests</option><option>7+ Guests (call us)</option>
+            </select>
+            <p class="field-error">Please select number of guests.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-date">Date</label>
+            <input id="res-date" type="date" required>
+            <p class="field-error">Please choose a date.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-time">Time</label>
+            <select id="res-time" required>
+              <option value="">Select</option>
+              <option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option>
+              <option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option>
+            </select>
+            <p class="field-error">Please choose a time.</p>
+          </div>
+          <div class="form-field sm:col-span-2">
+            <label for="res-notes">Special Requests (optional)</label>
+            <textarea id="res-notes" rows="3" placeholder="Allergies, celebrations, seating preferences..."></textarea>
+          </div>
+        </div>
+        <button id="res-submit-btn" type="submit" class="btn btn-gold w-full mt-8">Reserve Table</button>
+      </form>
+
+      <div id="reservation-success" class="hidden glass-panel p-10 md:p-14 rounded-lg text-center">
+        <div class="success-check mb-6">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--c-gold-light)" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3 class="font-head text-2xl md:text-3xl mb-3">Thank You, <span id="success-name">Guest</span>!</h3>
+        <p class="text-white/70 leading-relaxed mb-8">Your table request has been received. Our reservations team will confirm your booking by email shortly.</p>
+        <button id="res-book-another" class="btn btn-outline-light">Book Another Table</button>
+      </div>
+    </div>
+
+    <div class="space-y-8" data-aos="fade-left">
+      <div class="glass-panel p-7 rounded-lg">
+        <h3 class="font-head text-xl mb-4" style="color:var(--c-gold-light)">Opening Hours</h3>
+        <div id="reservation-hours"></div>
+      </div>
+      <div class="glass-panel p-7 rounded-lg">
+        <h3 class="font-head text-xl mb-3" style="color:var(--c-gold-light)">Restaurant Capacity</h3>
+        <p id="reservation-capacity" class="text-sm text-white/75 leading-relaxed"></p>
+      </div>
+      <div class="glass-panel p-7 rounded-lg">
+        <h3 class="font-head text-xl mb-3" style="color:var(--c-gold-light)">Dress Code</h3>
+        <p id="reservation-dresscode" class="text-sm text-white/75 leading-relaxed"></p>
+      </div>
+      <div class="glass-panel p-7 rounded-lg">
+        <h3 class="font-head text-xl mb-3" style="color:var(--c-gold-light)">Reservation Policy</h3>
+        <p id="reservation-policy" class="text-sm text-white/75 leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="whychooseus-eyebrow" class="eyebrow">Why Choose Us</p>
+      <h2 id="whychooseus-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">The AURELIA Difference</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div id="features-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-24 md:py-32 px-5 md:px-8 bg-beige/40">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="contact-eyebrow" class="eyebrow">Contact</p>
+      <h2 id="contact-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">Visit or Reach Us</h2>
+      <div class="divider-gold"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div data-aos="fade-right">
+        <div class="map-wrap aspect-[4/3] mb-8">
+          <iframe
+            id="contact-map-iframe"
+            title="AURELIA location map"
+            src="https://www.google.com/maps?q=412+Marchmont+Lane+New+York+NY&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <p class="text-xs uppercase tracking-widest text-charcoal/50 mb-1">Address</p>
+            <p id="contact-address" class="text-sm font-medium"></p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-charcoal/50 mb-1">Phone</p>
+            <a id="contact-phone-link" data-tel-link href="#" class="text-sm font-medium hover:underline"><span id="contact-phone"></span></a>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-charcoal/50 mb-1">Email</p>
+            <a id="contact-email-link" data-email-link href="#" class="text-sm font-medium hover:underline"><span id="contact-email"></span></a>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-charcoal/50 mb-1">Follow Us</p>
+            <div class="flex gap-2.5 mt-1.5">
+              <a href="#" class="social-icon" data-social="facebook" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v7h3v-7h2.2l.8-3H14V9a1 1 0 0 1 1-1Z"/></svg></a>
+              <a href="#" class="social-icon" data-social="instagram" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+              <a href="#" class="social-icon" data-social="tiktok" aria-label="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4v9.5a3 3 0 1 1-2.4-2.94M14 4a5 5 0 0 0 5 5"/></svg></a>
+              <a href="#" class="social-icon" data-social="twitter" aria-label="X (Twitter)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 4 16 16M20 4 4 20"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-aos="fade-left">
+        <div class="bg-white rounded-lg p-8 shadow-sm">
+          <h3 class="font-head text-xl mb-5">Opening Hours</h3>
+          <div id="contact-hours"></div>
+          <a href="#reservation" class="btn btn-dark w-full mt-8">Reserve a Table</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-charcoald text-white pt-16 pb-8 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+      <div class="md:col-span-2">
+        <p class="font-head text-2xl tracking-[0.15em] mb-4" style="color:var(--c-gold-light)" data-site-name>AURELIA</p>
+        <p id="footer-blurb" class="text-sm text-white/55 leading-relaxed max-w-xs">A modern culinary journey rooted in seasonal ingredients, quiet craftsmanship, and gracious hospitality since 2011.</p>
+        <div class="flex gap-2.5 mt-6">
+          <a href="#" class="social-icon" data-social="facebook" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v7h3v-7h2.2l.8-3H14V9a1 1 0 0 1 1-1Z"/></svg></a>
+          <a href="#" class="social-icon" data-social="instagram" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" class="social-icon" data-social="tiktok" aria-label="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4v9.5a3 3 0 1 1-2.4-2.94M14 4a5 5 0 0 0 5 5"/></svg></a>
+          <a href="#" class="social-icon" data-social="twitter" aria-label="X (Twitter)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 4 16 16M20 4 4 20"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <p class="font-body text-xs uppercase tracking-widest text-white/40 mb-4">Quick Links</p>
+        <ul class="space-y-2.5 text-sm text-white/70">
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#menu" class="hover:text-white">Menu</a></li>
+          <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
+          <li><a href="#testimonials" class="hover:text-white">Testimonials</a></li>
+          <li><a href="#reservation" class="hover:text-white">Reservation</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-body text-xs uppercase tracking-widest text-white/40 mb-4">Newsletter</p>
+        <p id="footer-newsletter-blurb" class="text-sm text-white/55 mb-4">Seasonal menus &amp; exclusive invitations, straight to your inbox.</p>
+        <form data-newsletter-form novalidate class="flex gap-2">
+          <input type="email" required placeholder="Email address" class="bg-white/5 border border-white/15 px-3 py-2.5 text-sm outline-none flex-1 placeholder:text-white/40 rounded">
+          <button class="btn btn-gold !py-2.5 !px-4">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-3 pt-6 text-xs text-white/35">
+      <p id="footer-copyright">&copy; 2026 AURELIA Restaurant. All rights reserved.</p>
+      <p id="footer-address-line">412 Marchmont Lane, New York, NY &middot; +1 (555) 284-9910</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- Toast -->
+<div id="toast" class="text-sm px-5 py-3 rounded-full"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

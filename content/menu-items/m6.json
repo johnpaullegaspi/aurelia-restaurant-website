@@ -1,0 +1,10 @@
+{
+  "id": "m6",
+  "order": 6,
+  "category": "Seafood",
+  "name": "Chilled Seafood Tower",
+  "desc": "Oysters, jumbo shrimp, king crab, mignonette, cocktail sauce.",
+  "price": 68,
+  "popular": false,
+  "img": "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=700&h=525&q=80"
+}

@@ -1,0 +1,28 @@
+[build]
+  # Compiles the individual CMS-editable files under /content (one file per
+  # menu item, gallery photo, etc.) into the aggregated /data/*.json files the
+  # site fetches at runtime. Runs on every deploy, including deploys
+  # triggered automatically when a staff member saves an edit in the CMS
+  # (which commits directly to this repo and so kicks off a normal Netlify
+  # build). Zero npm dependencies, so there's nothing to install.
+  command = "node scripts/build-content.js"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The compiled content files change whenever staff publish an edit — keep
+# them from being cached stale in a visitor's browser between deploys.
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Everything else (css/js/images) is safe to cache normally; Netlify's
+# default asset caching applies automatically.
+
+# Pretty URL for the CMS.
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200

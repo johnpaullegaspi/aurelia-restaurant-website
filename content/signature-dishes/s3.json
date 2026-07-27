@@ -1,0 +1,9 @@
+{
+  "id": "s3",
+  "order": 3,
+  "name": "Golden Saffron Risotto with Seared Scallops",
+  "price": 52,
+  "desc": "Slow-cooked Carnaroli rice infused with saffron, finished with Hokkaido scallops and a whisper of white truffle oil.",
+  "ingredients": "Carnaroli rice, saffron, Hokkaido scallops, white truffle oil, parmesan",
+  "img": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1000&h=1250&q=80"
+}

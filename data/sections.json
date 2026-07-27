@@ -1,0 +1,33 @@
+{
+  "menu": {
+    "eyebrow": "Featured Menu",
+    "heading": "Seasonal & Signature",
+    "subtext": "A curated selection from our full menu — crafted daily with the season's finest ingredients."
+  },
+  "signatureDishes": {
+    "eyebrow": "Chef's Table",
+    "heading": "Signature Dishes"
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "heading": "Moments at AURELIA",
+    "subtext": "A glimpse into our dining rooms, our kitchen, and the evenings we're proud to be part of."
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "heading": "What Our Guests Say"
+  },
+  "reservation": {
+    "eyebrow": "Reservation",
+    "heading": "Book Your Table",
+    "backgroundImage": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&h=1200&q=80"
+  },
+  "whyChooseUs": {
+    "eyebrow": "Why Choose Us",
+    "heading": "The AURELIA Difference"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading": "Visit or Reach Us"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "aurelia-restaurant-website",
+  "private": true,
+  "description": "AURELIA restaurant website — static site with Decap CMS-editable content.",
+  "scripts": {
+    "build": "node scripts/build-content.js"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "AURELIA",
+  "tagline": "A Modern Culinary Journey",
+  "phone": "+1 (555) 284-9910",
+  "email": "reservations@aureliarestaurant.com",
+  "address": "412 Marchmont Lane, Downtown District, New York, NY 10014",
+  "mapQuery": "412 Marchmont Lane New York NY",
+  "hours": [
+    {
+      "day": "Monday – Thursday",
+      "time": "5:30 PM – 10:00 PM"
+    },
+    {
+      "day": "Friday – Saturday",
+      "time": "5:30 PM – 11:30 PM"
+    },
+    {
+      "day": "Sunday",
+      "time": "5:00 PM – 9:30 PM"
+    }
+  ],
+  "capacity": "Up to 80 guests, including 3 private dining rooms",
+  "dressCode": "Smart casual to elegant — jackets suggested for gentlemen after 7 PM",
+  "policy": "Reservations held for 15 minutes past booking time. Parties of 6+ require a 48-hour cancellation notice.",
+  "footerBlurb": "A modern culinary journey rooted in seasonal ingredients, quiet craftsmanship, and gracious hospitality since 2011.",
+  "newsletterBlurb": "Seasonal menus & exclusive invitations, straight to your inbox.",
+  "copyrightLine": "© 2026 AURELIA Restaurant. All rights reserved.",
+  "socialLinks": {
+    "facebook": "#",
+    "instagram": "#",
+    "tiktok": "#",
+    "twitter": "#"
+  }
+}

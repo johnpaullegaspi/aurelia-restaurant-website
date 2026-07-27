@@ -1,0 +1,9 @@
+{
+  "id": "s1",
+  "order": 1,
+  "name": "Truffle-Crusted Wagyu Tenderloin",
+  "price": 78,
+  "desc": "Our most celebrated dish — A5 Wagyu tenderloin finished with a black truffle crust, served over a bed of roasted bone marrow purée with a 48-hour red wine jus.",
+  "ingredients": "A5 Wagyu beef, black truffle, bone marrow, aged red wine, micro herbs",
+  "img": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&h=1250&q=80"
+}
