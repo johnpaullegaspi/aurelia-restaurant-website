@@ -5,27 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AURELIA — Content Admin</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141210'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%23D8B889' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
-  <!-- Decap CMS pinned to an EXACT version (no caret) — a range like
-       "^3.8.3" resolves to whatever unpkg's newest matching release is at
-       load time, with no build step to catch a breaking update before it
-       ships to visitors. 3.9.0 satisfies DecapBridge's "higher than v3.8.3"
-       requirement for its login options and is confirmed working. -->
+  <!-- Decap CMS. Pinned to a version >= 3.8.3, required for DecapBridge's
+       SSO login options (see DEPLOYMENT.md). -->
+  <script src="https://unpkg.com/decap-cms@^3.8.3/dist/decap-cms.js"></script>
 </head>
 <body>
   <!-- Decap CMS reads admin/config.yml automatically and renders the whole
-       editing UI into this page — nothing else to build here.
-
-       IMPORTANT: this script tag MUST stay at the end of <body>, not in
-       <head>. Decap CMS builds its own UI container via
-       document.body.appendChild(...) as soon as the script runs, with no
-       "wait for DOM ready" guard — if the script executes before <body>
-       has been parsed (e.g. because it's in <head> with no defer/async),
-       document.body is still null and this throws "Cannot read properties
-       of null (reading 'appendChild')", crashing before the login screen
-       (or anything else) ever renders. This is what was actually broken
-       here — it looked like a decap-cms version bug because testing by
-       re-injecting the script into an already-loaded page (body already
-       present) masked the real ordering issue every time. -->
-  <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
+       editing UI into this page — nothing else to build here. -->
 </body>
 </html>

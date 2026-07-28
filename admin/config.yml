@@ -13,21 +13,10 @@
 
 backend:
   name: git-gateway
-  repo: johnpaullegaspi/aurelia-restaurant-website
+  repo: johnpaullegaspi/aurelia-restaurant-website   # <-- replace with your actual GitHub repo
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/76d70fdb-7d81-4369-a734-58e03b9ecf14
+  identity_url: https://auth.decapbridge.com/sites/76d70fdb-7d81-4369-a734-58e03b9ecf14   # <-- replace with the URL DecapBridge gives you
   gateway_url: https://gateway.decapbridge.com
-  # See who did what (optional)
-  commit_messages:
-    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
-    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
-
-# Better Decap + Bridge logo (optional)
-logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Staff edits are published straight to the branch above (no draft/review
 # step). To require a review before changes go live, change this to
@@ -37,7 +26,7 @@ publish_mode: simple
 media_folder: "images/uploads"   # staff-uploaded photos are committed here
 public_folder: "/images/uploads"
 
-site_url: https://aurila-restaurant.netlify.app   # used for CMS "Preview" links
+site_url: https://aurila-restaurant.netlify.app   # <-- replace with your live Netlify URL, used for CMS "Preview" links
 display_url: https://aurila-restaurant.netlify.app
 
 locale: "en"
@@ -55,6 +44,7 @@ collections:
       - name: "restaurant"
         label: "Restaurant Info"
         file: "content/settings/restaurant.json"
+        format: "json"
         fields:
           - { label: "Restaurant Name", name: "name", widget: "string" }
           - { label: "Tagline", name: "tagline", widget: "string" }
@@ -86,6 +76,7 @@ collections:
       - name: "hero"
         label: "Hero Banner"
         file: "content/settings/hero.json"
+        format: "json"
         fields:
           - { label: "Eyebrow (small text above title)", name: "eyebrow", widget: "string" }
           - { label: "Title — Line 1", name: "titleLine1", widget: "string" }
@@ -98,6 +89,7 @@ collections:
       - name: "about"
         label: "About Section"
         file: "content/settings/about.json"
+        format: "json"
         fields:
           - { label: "Eyebrow", name: "eyebrow", widget: "string" }
           - { label: "Heading — Line 1", name: "headingLine1", widget: "string" }
@@ -114,6 +106,7 @@ collections:
       - name: "sections"
         label: "Section Headings"
         file: "content/settings/sections.json"
+        format: "json"
         fields:
           - label: "Featured Menu"
             name: "menu"
@@ -164,6 +157,7 @@ collections:
       - name: "menu_categories"
         label: "Menu Categories"
         file: "content/settings/menu-categories.json"
+        format: "json"
         fields:
           - label: "Categories (in display order)"
             name: "categories"
@@ -177,6 +171,8 @@ collections:
     label: "Menu Items"
     folder: "content/menu-items"
     create: true
+    format: "json"
+    extension: "json"
     slug: "{{fields.id}}"
     identifier_field: "name"
     summary: "{{name}} — {{category}}"
@@ -202,6 +198,8 @@ collections:
     label: "Signature Dishes"
     folder: "content/signature-dishes"
     create: true
+    format: "json"
+    extension: "json"
     slug: "{{fields.id}}"
     identifier_field: "name"
     sortable_fields: ["order", "name"]
@@ -221,6 +219,8 @@ collections:
     label: "Gallery Photos"
     folder: "content/gallery"
     create: true
+    format: "json"
+    extension: "json"
     slug: "{{fields.id}}"
     identifier_field: "caption"
     sortable_fields: ["order", "caption", "cat"]
@@ -238,6 +238,8 @@ collections:
     label: "Testimonials"
     folder: "content/testimonials"
     create: true
+    format: "json"
+    extension: "json"
     slug: "{{fields.id}}"
     identifier_field: "name"
     sortable_fields: ["order", "date", "rating"]
@@ -257,6 +259,8 @@ collections:
     label: "Why Choose Us — Feature Cards"
     folder: "content/features"
     create: true
+    format: "json"
+    extension: "json"
     slug: "{{fields.id}}"
     identifier_field: "title"
     sortable_fields: ["order", "title"]
