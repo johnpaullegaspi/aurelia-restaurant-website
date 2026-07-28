@@ -15,7 +15,7 @@ backend:
   name: git-gateway
   repo: johnpaullegaspi/aurelia-restaurant-website
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/2de624d8-9e81-4300-a274-366589792902
+  identity_url: https://auth.decapbridge.com/sites/76d70fdb-7d81-4369-a734-58e03b9ecf14
   gateway_url: https://gateway.decapbridge.com
   # See who did what (optional)
   commit_messages:
