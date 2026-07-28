@@ -1,771 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Radiance Dental Studio | Modern Luxury Dental Clinic</title>
-<meta name="description" content="Radiance Dental Studio offers world-class dental treatments with compassion, precision, and modern technology. Book your appointment today for a smile you'll love." />
-<meta name="keywords" content="dental clinic, cosmetic dentistry, teeth whitening, dental implants, invisalign, family dentist, smile makeover" />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.radiancedental.example/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURELIA — Fine Dining Restaurant | A Modern Culinary Journey</title>
+<meta name="description" content="AURELIA is a modern fine dining restaurant offering an unforgettable culinary journey — seasonal ingredients, award-winning cuisine, and an elegant atmosphere. Reserve your table today.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141210'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' fill='%23D8B889' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 
 <!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Radiance Dental Studio | Modern Luxury Dental Clinic" />
-<meta property="og:description" content="World-class dental treatments delivered with compassion, precision, and modern technology. Your smile deserves exceptional care." />
-<meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" />
-<meta property="og:url" content="https://www.radiancedental.example/" />
-<meta property="og:site_name" content="Radiance Dental Studio" />
+<meta property="og:type" content="website">
+<meta property="og:title" content="AURELIA — Fine Dining Restaurant">
+<meta property="og:description" content="A modern culinary journey. Seasonal ingredients, award-winning cuisine, elegant atmosphere. Reserve your table today.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:site_name" content="AURELIA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AURELIA — Fine Dining Restaurant">
+<meta name="twitter:description" content="A modern culinary journey. Reserve your table today.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&h=630&q=80">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Radiance Dental Studio | Modern Luxury Dental Clinic" />
-<meta name="twitter:description" content="World-class dental treatments delivered with compassion, precision, and modern technology." />
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%B7%3C/text%3E%3C/svg%3E" />
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
-<!-- AOS scroll animations -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
-
-<!-- Swiper -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
-
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
-    darkMode: 'class',
     theme: {
       extend: {
         colors: {
-          ivory: '#FBF9F4',
-          sky: { 50:'#f0f9ff',100:'#e0f2fe',200:'#bae6fd',300:'#7dd3fc',400:'#38bdf8',500:'#0ea5e9' },
-          mint: { 50:'#f1faf6',100:'#dcf5ea',200:'#b8ebd6',300:'#8fe0c0',400:'#63cfa6',500:'#3fb98c' },
-          beige: { 50:'#fbf7f0',100:'#f5ecdd',200:'#ecdcc0' },
-          charcoal: '#2b2f36',
-          slateink: '#3f4753',
+          cream: '#FAF6EF', beige: '#EAE0CE', charcoal: '#26221D', charcoald: '#141210',
+          gold: '#B8935A', goldlight: '#D8B889', golddark: '#8F6F3F', line: 'rgba(184,147,90,.25)'
         },
         fontFamily: {
-          heading: ['Poppins','sans-serif'],
-          body: ['Inter','sans-serif'],
-          accent: ['Manrope','sans-serif'],
-        },
-        borderRadius: { '4xl':'2rem', '5xl':'2.5rem' },
-        boxShadow: {
-          soft: '0 10px 40px -12px rgba(63,90,120,0.15)',
-          softer: '0 4px 20px -4px rgba(63,90,120,0.10)',
-          glow: '0 0 40px rgba(125,211,252,0.35)',
-        },
+          head: ['"Playfair Display"', 'serif'],
+          body: ['Poppins', 'sans-serif'],
+        }
       }
     }
   }
 </script>
 
-<!-- Local styles -->
-<link rel="stylesheet" href="css/styles.css" />
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<!-- GLightbox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
-<!-- Structured Data: LocalBusiness / Dentist -->
+<link rel="stylesheet" href="css/styles.css">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Dentist",
-  "name": "Radiance Dental Studio",
-  "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
-  "@id": "https://www.radiancedental.example/",
-  "url": "https://www.radiancedental.example/",
-  "telephone": "+1-555-123-4567",
-  "priceRange": "$$",
+  "@type": "Restaurant",
+  "name": "AURELIA",
+  "description": "A modern fine dining restaurant offering a seasonal, chef-driven culinary journey.",
+  "servesCuisine": "Modern European",
+  "priceRange": "$$$$",
+  "telephone": "+1-555-284-9910",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "128 Wellness Avenue, Suite 300",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "postalCode": "94105",
+    "streetAddress": "412 Marchmont Lane",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10014",
     "addressCountry": "US"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 37.7897, "longitude": -122.3972 },
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/radiancedental",
-    "https://www.instagram.com/radiancedental"
-  ]
+  "openingHours": ["Mo-Th 17:30-22:00", "Fr-Sa 17:30-23:30", "Su 17:00-21:30"],
+  "sameAs": ["https://instagram.com/aurelia", "https://facebook.com/aurelia", "https://tiktok.com/@aurelia"]
 }
 </script>
 </head>
-<body class="font-body text-slateink bg-white antialiased">
+<body class="bg-cream text-charcoal font-body">
 
-<!-- Page Loader -->
-<div id="page-loader" class="fixed inset-0 z-[100] flex items-center justify-center bg-white transition-opacity duration-700">
-  <div class="flex flex-col items-center gap-4">
-    <div class="tooth-loader">
-      <i class="fa-solid fa-tooth text-4xl text-sky-400"></i>
-    </div>
-    <p class="font-heading text-sm tracking-[0.3em] uppercase text-slateink/50">Radiance Dental Studio</p>
-  </div>
+<!-- Page loader -->
+<div id="page-loader">
+  <span class="loader-mark">AURELIA</span>
+  <div class="loader-bar"></div>
 </div>
 
-<!-- Cookie Consent -->
-<div id="cookie-banner" class="fixed bottom-20 sm:bottom-0 inset-x-0 z-50 translate-y-full transition-transform duration-500 ease-out">
-  <div class="mx-4 mb-4 md:mx-auto md:max-w-3xl glass-panel rounded-3xl shadow-soft p-5 flex flex-col sm:flex-row items-center gap-4">
-    <p class="text-sm text-slateink/80 flex-1">We use cookies to enhance your browsing experience and provide personalized care recommendations. Read our <a href="#" class="underline decoration-sky-300 hover:text-sky-500">Privacy Policy</a>.</p>
-    <div class="flex gap-2 shrink-0">
-      <button id="cookie-decline" class="px-4 py-2 rounded-full text-sm font-medium text-slateink/70 hover:bg-slateink/5 transition">Decline</button>
-      <button id="cookie-accept" class="px-5 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-sky-400 to-mint-400 text-white shadow-softer hover:shadow-glow transition">Accept</button>
-    </div>
-  </div>
-</div>
+<!-- ============ NAV ============ -->
+<header id="site-nav" class="site-nav text-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between">
+    <a href="#home" class="nav-logo font-head text-2xl md:text-[26px] tracking-[0.15em]" data-site-name>AURELIA</a>
 
-<!-- ================= NAVBAR ================= -->
-<header id="navbar" class="fixed top-0 inset-x-0 z-40 transition-all duration-500">
-  <nav class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div id="nav-inner" class="flex items-center justify-between h-20 transition-all duration-500 rounded-full mt-3 px-4 lg:px-6">
-      <a href="#home" class="flex items-center gap-2 font-heading font-bold text-xl text-slateink">
-        <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sky-300 to-mint-300 flex items-center justify-center shadow-softer">
-          <i class="fa-solid fa-tooth text-white"></i>
-        </span>
-        Radiance <span class="font-light text-slateink/60">Dental</span>
-      </a>
+    <nav class="hidden lg:flex items-center gap-9 font-body text-[13px] tracking-[0.04em]" aria-label="Primary">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#reservation" class="nav-link">Reservation</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
 
-      <ul id="nav-links" class="hidden lg:flex items-center gap-1 font-accent text-[14.5px] font-medium">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#dentists" class="nav-link">Dentists</a></li>
-        <li><a href="#before-after" class="nav-link">Before & After</a></li>
-        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-        <li><a href="#promotions" class="nav-link">Promotions</a></li>
-        <li><a href="#blog" class="nav-link">Blog</a></li>
-        <li><a href="#faqs" class="nav-link">FAQs</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-
-      <div class="flex items-center gap-2">
-        <button id="dark-toggle" aria-label="Toggle dark mode" class="w-10 h-10 rounded-full hidden sm:flex items-center justify-center hover:bg-slateink/5 transition">
-          <i class="fa-solid fa-moon text-slateink/70"></i>
-        </button>
-        <a href="#booking" class="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-sky-400 to-mint-400 text-white font-accent font-semibold text-sm px-5 py-2.5 rounded-full shadow-softer hover:shadow-glow hover:-translate-y-0.5 transition-all">
-          <i class="fa-regular fa-calendar-check"></i> Book Appointment
-        </a>
-        <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-slateink/5 transition" aria-label="Open menu">
-          <i class="fa-solid fa-bars text-lg"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="lg:hidden fixed inset-0 z-[55] hidden">
-    <div class="absolute inset-0 bg-slateink/40 backdrop-blur-sm" id="mobile-menu-overlay"></div>
-    <div class="absolute right-0 top-0 h-full w-[82%] max-w-sm bg-white shadow-2xl p-6 flex flex-col gap-1 overflow-y-auto translate-x-full transition-transform duration-400" id="mobile-menu-panel">
-      <div class="flex items-center justify-between mb-6">
-        <span class="font-heading font-bold text-lg">Menu</span>
-        <button id="mobile-menu-close" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-slateink/5"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <a href="#home" class="mobile-link">Home</a>
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#services" class="mobile-link">Services</a>
-      <a href="#dentists" class="mobile-link">Meet Our Dentists</a>
-      <a href="#before-after" class="mobile-link">Before & After</a>
-      <a href="#testimonials" class="mobile-link">Testimonials</a>
-      <a href="#gallery" class="mobile-link">Gallery</a>
-      <a href="#promotions" class="mobile-link">Promotions</a>
-      <a href="#blog" class="mobile-link">Blog</a>
-      <a href="#faqs" class="mobile-link">FAQs</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-      <a href="#booking" class="mt-4 text-center bg-gradient-to-r from-sky-400 to-mint-400 text-white font-semibold px-5 py-3 rounded-full shadow-softer">Book Appointment</a>
+    <div class="flex items-center gap-4">
+      <a href="#reservation" class="btn btn-gold hidden md:inline-flex !py-2.5 !px-5 !text-[11px]">Reserve a Table</a>
+      <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-11 h-11 -mr-2.5 hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger"><span></span><span></span><span></span></span>
+      </button>
     </div>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section id="home" class="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-48 lg:pb-36 hero-gradient">
-  <div class="floating-shape shape-1"></div>
-  <div class="floating-shape shape-2"></div>
-  <div class="floating-shape shape-3"></div>
-  <div class="absolute inset-0 hero-dots"></div>
+<!-- Mobile menu -->
+<div id="mobile-scrim" class="mobile-scrim"></div>
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile">
+  <div class="flex flex-col h-full px-8 pt-28 pb-10 text-white">
+    <a href="#home" class="py-4 border-b border-white/10 font-head text-xl">Home</a>
+    <a href="#about" class="py-4 border-b border-white/10 font-head text-xl">About</a>
+    <a href="#menu" class="py-4 border-b border-white/10 font-head text-xl">Menu</a>
+    <a href="#gallery" class="py-4 border-b border-white/10 font-head text-xl">Gallery</a>
+    <a href="#testimonials" class="py-4 border-b border-white/10 font-head text-xl">Testimonials</a>
+    <a href="#reservation" class="py-4 border-b border-white/10 font-head text-xl">Reservation</a>
+    <a href="#contact" class="py-4 border-b border-white/10 font-head text-xl">Contact</a>
+    <a href="#reservation" class="btn btn-gold w-full mt-8 justify-center">Reserve a Table</a>
+  </div>
+</nav>
 
-  <div class="relative mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-    <div data-aos="fade-up" class="text-center lg:text-left">
-      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur border border-white/60 shadow-softer text-xs font-accent font-semibold tracking-wide text-slateink/70 mb-6">
-        <i class="fa-solid fa-sparkles text-sky-400"></i> <span data-cms="hero.badge">Premium Dental Care Since 2008</span>
-      </span>
-      <h1 class="font-heading font-bold text-3xl sm:text-5xl lg:text-6xl leading-[1.15] sm:leading-[1.1] text-charcoal">
-        <span data-cms="hero.headlinePrefix">Your Smile Deserves</span> <span class="text-gradient" data-cms="hero.headlineHighlight">Exceptional Care</span>
-      </h1>
-      <p class="mt-5 sm:mt-6 text-base sm:text-lg text-slateink/70 max-w-xl mx-auto lg:mx-0 leading-relaxed" data-cms="hero.subheadline">
-        Providing world-class dental treatments with compassion, precision, and modern technology — in a space designed for your comfort.
-      </p>
-      <div class="mt-8 sm:mt-9 flex flex-wrap justify-center lg:justify-start gap-4">
-        <a href="#booking" class="btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
-        <a href="#contact" class="btn-secondary"><i class="fa-regular fa-comment-dots"></i> Contact Us</a>
-      </div>
-      <div class="mt-10 sm:mt-12 grid grid-cols-3 gap-3 sm:gap-6 max-w-md mx-auto lg:mx-0">
-        <div>
-          <p class="font-heading font-bold text-2xl sm:text-3xl text-charcoal counter" data-target="18000">0</p>
-          <p class="text-[11px] sm:text-xs text-slateink/60 mt-1">Patients Served</p>
-        </div>
-        <div>
-          <p class="font-heading font-bold text-2xl sm:text-3xl text-charcoal"><span class="counter" data-target="16">0</span>+</p>
-          <p class="text-[11px] sm:text-xs text-slateink/60 mt-1">Years Experience</p>
-        </div>
-        <div>
-          <p class="font-heading font-bold text-2xl sm:text-3xl text-charcoal"><span class="counter" data-target="99">0</span>%</p>
-          <p class="text-[11px] sm:text-xs text-slateink/60 mt-1">Satisfaction Rate</p>
-        </div>
-      </div>
-    </div>
+<main>
+<!-- ============ HERO ============ -->
+<section id="home" class="hero flex items-center justify-center text-center">
+  <div id="hero-bg" class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&h=1200&q=80')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grain"></div>
+  <div class="float-el bg-goldlight w-72 h-72" style="top:14%;left:8%"></div>
+  <div class="float-el bg-gold w-64 h-64" style="bottom:18%;right:10%;animation-delay:3s"></div>
 
-    <div class="relative mt-4 lg:mt-0" data-aos="fade-left" data-aos-delay="150">
-      <div class="relative rounded-5xl overflow-hidden shadow-soft aspect-[4/5] max-w-xs sm:max-w-md mx-auto img-hover">
-        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80" alt="Smiling dentist with patient in modern dental clinic" loading="eager" class="w-full h-full object-cover" data-cms-img="hero.heroImage" />
-      </div>
-      <div class="glass-panel absolute left-2 lg:-left-6 bottom-6 lg:bottom-10 hidden lg:flex items-center gap-3 rounded-3xl p-4 shadow-soft w-56 float-anim">
-        <div class="w-11 h-11 rounded-full bg-mint-100 flex items-center justify-center text-mint-500 shrink-0"><i class="fa-solid fa-shield-heart"></i></div>
-        <div>
-          <p class="text-sm font-semibold text-charcoal">Sterilized & Safe</p>
-          <p class="text-xs text-slateink/60">Hospital-grade hygiene</p>
-        </div>
-      </div>
-      <div class="glass-panel absolute right-2 lg:-right-4 top-6 lg:top-8 hidden lg:flex items-center gap-3 rounded-3xl p-4 shadow-soft w-52 float-anim" style="animation-delay:1s">
-        <div class="flex -space-x-2 shrink-0">
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="patient"/>
-          <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=100&q=80" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="patient"/>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-charcoal">4.9/5 Rating</p>
-          <p class="text-xs text-slateink/60">1,200+ Google reviews</p>
-        </div>
-      </div>
+  <div class="relative px-6 max-w-3xl mx-auto">
+    <p id="hero-eyebrow" class="eyebrow text-goldlight opacity-0" style="opacity:0;transform:translateY(16px);color:var(--c-gold-light)">Fine Dining &middot; Est. 2011</p>
+    <h1 id="hero-title" class="font-head text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mt-5" style="opacity:0;transform:translateY(24px)">Elevate Every<br>Evening</h1>
+    <p id="hero-desc" class="text-white/85 text-sm md:text-base max-w-xl mx-auto mt-6 leading-relaxed" style="opacity:0;transform:translateY(20px)">A modern culinary journey rooted in seasonal ingredients, quiet craftsmanship, and gracious hospitality. Welcome to AURELIA.</p>
+    <div id="hero-ctas" class="flex flex-wrap items-center justify-center gap-4 mt-9" style="opacity:0;transform:translateY(20px)">
+      <a href="#menu" id="hero-cta-primary" class="btn btn-outline-light">View Menu</a>
+      <a href="#reservation" id="hero-cta-secondary" class="btn btn-gold">Reserve a Table</a>
     </div>
   </div>
 
-  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-1 text-slateink/40 animate-bounce">
-    <span class="text-[11px] tracking-widest uppercase">Scroll</span>
-    <i class="fa-solid fa-chevron-down text-xs"></i>
+  <div id="scroll-indicator" class="scroll-indicator" style="opacity:0">
+    <span class="mouse"></span>
+    <span class="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
   </div>
 </section>
-<!-- ================= ABOUT ================= -->
-<section id="about" class="py-16 sm:py-20 lg:py-32 bg-white relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">About The Clinic</span>
-      <h2 class="section-title mt-3">Where Comfort Meets Clinical Excellence</h2>
-      <p class="mt-4 text-slateink/65 leading-relaxed" data-cms="about.introText">For over 16 years, Radiance Dental Studio has combined advanced technology with genuine, personal care — creating a space where every patient feels seen, safe, and confident in their smile.</p>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <div class="relative" data-aos="fade-right">
+      <div class="rounded overflow-hidden aspect-[4/5] shadow-2xl bg-beige">
+        <img id="about-main-img" src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&h=1125&q=80" alt="AURELIA's elegant dining room interior" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="hidden md:block absolute -bottom-8 -right-8 w-48 rounded overflow-hidden shadow-2xl border-4 border-cream bg-beige">
+        <img id="about-chef-img" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=500&h=625&q=80" alt="Chef Marchetti plating a signature dish" class="w-full h-full object-cover" loading="lazy">
+      </div>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-16 lg:mb-24">
-      <div class="grid grid-cols-2 gap-3 sm:gap-4" data-aos="fade-right">
-        <div class="space-y-3 sm:space-y-4">
-          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80" class="w-full h-36 sm:h-48 object-cover" alt="Bright modern clinic reception"/></div>
-          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" class="w-full h-48 sm:h-64 object-cover" alt="Dental treatment room"/></div>
+    <div data-aos="fade-left">
+      <p id="about-eyebrow" class="eyebrow">Our Story</p>
+      <h2 id="about-heading" class="font-head text-3xl md:text-5xl mt-4 mb-6 leading-tight">Where Craft Meets<br>Quiet Elegance</h2>
+      <p id="about-para1" class="text-charcoal/65 leading-relaxed mb-4">Founded in 2011 by Chef Antoine Marchetti, AURELIA began as a single idea: that fine dining should feel both extraordinary and effortless. Every dish on our menu is built around the season's finest ingredients, sourced from farms and purveyors we've partnered with for over a decade.</p>
+      <p id="about-para2" class="text-charcoal/65 leading-relaxed mb-8">Chef Marchetti trained in Lyon and Tokyo before bringing his refined, ingredient-first philosophy to New York. Today, his kitchen blends classical French technique with modern restraint — nothing on the plate without purpose, nothing missing that should be there.</p>
+
+      <div class="grid grid-cols-2 gap-6 mb-10">
+        <div>
+          <p class="stat-num"><span id="stat-years" class="counter" data-target="15" data-suffix="+">0</span></p>
+          <p class="text-xs uppercase tracking-widest text-charcoal/50 mt-1">Years Experience</p>
         </div>
-        <div class="space-y-3 sm:space-y-4 pt-6 sm:pt-10">
-          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dcf?auto=format&fit=crop&w=600&q=80" class="w-full h-48 sm:h-64 object-cover" alt="Modern dental equipment"/></div>
-          <div class="rounded-4xl overflow-hidden shadow-soft img-hover"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" class="w-full h-36 sm:h-48 object-cover" alt="Friendly dental staff"/></div>
+        <div>
+          <p class="stat-num"><span id="stat-guests" class="counter" data-target="20000" data-suffix="+">0</span></p>
+          <p class="text-xs uppercase tracking-widest text-charcoal/50 mt-1">Happy Guests</p>
+        </div>
+        <div>
+          <p class="stat-num"><span id="stat-dishes" class="counter" data-target="100" data-suffix="+">0</span></p>
+          <p class="text-xs uppercase tracking-widest text-charcoal/50 mt-1">Signature Dishes</p>
+        </div>
+        <div>
+          <p class="stat-num"><span id="stat-rating" class="counter" data-target="4.9" data-decimals="1" data-suffix="★">0</span></p>
+          <p class="text-xs uppercase tracking-widest text-charcoal/50 mt-1">Customer Rating</p>
+        </div>
+      </div>
+
+      <a href="#reservation" class="btn btn-outline-dark">Reserve a Table</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED MENU ============ -->
+<section id="menu" class="py-24 md:py-32 px-5 md:px-8 bg-beige/40">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="menu-eyebrow" class="eyebrow">Featured Menu</p>
+      <h2 id="menu-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">Seasonal &amp; Signature</h2>
+      <div class="divider-gold"></div>
+      <p id="menu-subtext" class="text-charcoal/60 mt-5 leading-relaxed">A curated selection from our full menu — crafted daily with the season's finest ingredients.</p>
+    </div>
+
+    <div id="menu-tabs" class="flex items-center justify-start md:justify-center gap-7 overflow-x-auto no-scrollbar mb-12 border-b border-line pb-1" data-aos="fade-up"></div>
+
+    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7"></div>
+
+    <p class="text-center text-xs text-charcoal/40 mt-10">Consuming raw or undercooked meats, poultry, seafood, or eggs may increase your risk of foodborne illness. Please inform your server of any allergies.</p>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE DISHES ============ -->
+<section class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-16" data-aos="fade-up">
+      <p id="signature-eyebrow" class="eyebrow">Chef's Table</p>
+      <h2 id="signature-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">Signature Dishes</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div id="signature-grid"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="py-24 md:py-32 px-5 md:px-8 bg-charcoald text-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="gallery-eyebrow" class="eyebrow" style="color:var(--c-gold-light)">Gallery</p>
+      <h2 id="gallery-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">Moments at AURELIA</h2>
+      <div class="divider-gold"></div>
+      <p id="gallery-subtext" class="text-white/55 mt-5 leading-relaxed">A glimpse into our dining rooms, our kitchen, and the evenings we're proud to be part of.</p>
+    </div>
+    <div id="gallery-masonry" class="masonry"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="testimonials-eyebrow" class="eyebrow">Testimonials</p>
+      <h2 id="testimonials-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">What Our Guests Say</h2>
+      <div class="divider-gold"></div>
+    </div>
+
+    <div class="testimonials-swiper relative pb-14" data-aos="fade-up">
+      <div class="swiper-wrapper" id="testimonials-swiper-wrapper"></div>
+      <div class="testimonials-pagination flex justify-center gap-2 mt-2"></div>
+      <button class="testimonials-prev hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center z-10" aria-label="Previous testimonial">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="testimonials-next hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center z-10" aria-label="Next testimonial">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVATION ============ -->
+<section id="reservation" class="py-24 md:py-32 px-5 md:px-8 bg-charcoald text-white relative overflow-hidden">
+  <div id="reservation-bg" class="absolute inset-0 opacity-20" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&h=1200&q=80');background-size:cover;background-position:center"></div>
+  <div class="relative max-w-6xl mx-auto grid lg:grid-cols-[1.2fr_1fr] gap-14">
+    <div data-aos="fade-right">
+      <p id="reservation-eyebrow" class="eyebrow" style="color:var(--c-gold-light)">Reservation</p>
+      <h2 id="reservation-heading" class="font-head text-3xl md:text-5xl mt-4 mb-8">Book Your Table</h2>
+
+      <form id="reservation-form" class="glass-panel p-7 md:p-10 rounded-lg" novalidate>
+        <div class="grid sm:grid-cols-2 gap-x-6 gap-y-5">
+          <div class="form-field sm:col-span-2">
+            <label for="res-name">Full Name</label>
+            <input id="res-name" type="text" placeholder="Jane Doe" required>
+            <p class="field-error">Please enter your full name.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-email">Email</label>
+            <input id="res-email" type="email" placeholder="jane@email.com" required>
+            <p class="field-error">Please enter a valid email address.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-phone">Phone Number</label>
+            <input id="res-phone" type="tel" placeholder="(555) 123-4567" required>
+            <p class="field-error">Please enter a valid phone number.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-guests">Number of Guests</label>
+            <select id="res-guests" required>
+              <option value="">Select</option>
+              <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 Guests</option>
+              <option>5 Guests</option><option>6 Guests</option><option>7+ Guests (call us)</option>
+            </select>
+            <p class="field-error">Please select number of guests.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-date">Date</label>
+            <input id="res-date" type="date" required>
+            <p class="field-error">Please choose a date.</p>
+          </div>
+          <div class="form-field">
+            <label for="res-time">Time</label>
+            <select id="res-time" required>
+              <option value="">Select</option>
+              <option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option>
+              <option>7:30 PM</option><option>8:00 PM</option><option>8:30 PM</option><option>9:00 PM</option>
+            </select>
+            <p class="field-error">Please choose a time.</p>
+          </div>
+          <div class="form-field sm:col-span-2">
+            <label for="res-notes">Special Requests (optional)</label>
+            <textarea id="res-notes" rows="3" placeholder="Allergies, celebrations, seating preferences..."></textarea>
+          </div>
+        </div>
+        <button id="res-submit-btn" type="submit" class="btn btn-gold w-full mt-8">Reserve Table</button>
+      </form>
+
+      <div id="reservation-success" class="hidden glass-panel p-10 md:p-14 rounded-lg text-center">
+        <div class="success-check mb-6">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--c-gold-light)" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3 class="font-head text-2xl md:text-3xl mb-3">Thank You, <span id="success-name">Guest</span>!</h3>
+        <p class="text-white/70 leading-relaxed mb-8">Your table request has been received. Our reservations team will confirm your booking by email shortly.</p>
+        <button id="res-book-another" class="btn btn-outline-light">Book Another Table</button>
+      </div>
+    </div>
+
+    <div class="space-y-8" data-aos="fade-left">
+      <div class="glass-panel p-7 rounded-lg">
+        <h3 class="font-head text-xl mb-4" style="color:var(--c-gold-light)">Opening Hours</h3>
+        <div id="reservation-hours"></div>
+      </div>
+      <div class="glass-panel p-7 rounded-lg">
+        <h3 class="font-head text-xl mb-3" style="color:var(--c-gold-light)">Restaurant Capacity</h3>
+        <p id="reservation-capacity" class="text-sm text-white/75 leading-relaxed"></p>
+      </div>
+      <div class="glass-panel p-7 rounded-lg">
+        <h3 class="font-head text-xl mb-3" style="color:var(--c-gold-light)">Dress Code</h3>
+        <p id="reservation-dresscode" class="text-sm text-white/75 leading-relaxed"></p>
+      </div>
+      <div class="glass-panel p-7 rounded-lg">
+        <h3 class="font-head text-xl mb-3" style="color:var(--c-gold-light)">Reservation Policy</h3>
+        <p id="reservation-policy" class="text-sm text-white/75 leading-relaxed"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="py-24 md:py-32 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="whychooseus-eyebrow" class="eyebrow">Why Choose Us</p>
+      <h2 id="whychooseus-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">The AURELIA Difference</h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div id="features-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-24 md:py-32 px-5 md:px-8 bg-beige/40">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+      <p id="contact-eyebrow" class="eyebrow">Contact</p>
+      <h2 id="contact-heading" class="font-head text-3xl md:text-5xl mt-4 mb-4">Visit or Reach Us</h2>
+      <div class="divider-gold"></div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div data-aos="fade-right">
+        <div class="map-wrap aspect-[4/3] mb-8">
+          <iframe
+            id="contact-map-iframe"
+            title="AURELIA location map"
+            src="https://www.google.com/maps?q=412+Marchmont+Lane+New+York+NY&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <p class="text-xs uppercase tracking-widest text-charcoal/50 mb-1">Address</p>
+            <p id="contact-address" class="text-sm font-medium"></p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-charcoal/50 mb-1">Phone</p>
+            <a id="contact-phone-link" data-tel-link href="#" class="text-sm font-medium hover:underline"><span id="contact-phone"></span></a>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-charcoal/50 mb-1">Email</p>
+            <a id="contact-email-link" data-email-link href="#" class="text-sm font-medium hover:underline"><span id="contact-email"></span></a>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-charcoal/50 mb-1">Follow Us</p>
+            <div class="flex gap-2.5 mt-1.5">
+              <a href="#" class="social-icon" data-social="facebook" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v7h3v-7h2.2l.8-3H14V9a1 1 0 0 1 1-1Z"/></svg></a>
+              <a href="#" class="social-icon" data-social="instagram" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+              <a href="#" class="social-icon" data-social="tiktok" aria-label="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4v9.5a3 3 0 1 1-2.4-2.94M14 4a5 5 0 0 0 5 5"/></svg></a>
+              <a href="#" class="social-icon" data-social="twitter" aria-label="X (Twitter)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 4 16 16M20 4 4 20"/></svg></a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div data-aos="fade-left">
-        <div class="grid sm:grid-cols-2 gap-4 sm:gap-5 mb-8">
-          <div class="value-card"><i class="fa-solid fa-bullseye text-sky-400"></i><h3 data-cms="about.mission.title">Our Mission</h3><p data-cms="about.mission.text">Deliver exceptional, personalized dental care that improves confidence and long-term oral health.</p></div>
-          <div class="value-card"><i class="fa-solid fa-eye text-mint-500"></i><h3 data-cms="about.vision.title">Our Vision</h3><p data-cms="about.vision.text">To be the region's most trusted name in modern, comfortable, and compassionate dentistry.</p></div>
-          <div class="value-card"><i class="fa-solid fa-heart text-sky-400"></i><h3 data-cms="about.values.title">Our Values</h3><p data-cms="about.values.text">Integrity, empathy, precision, and continuous innovation guide everything we do.</p></div>
-          <div class="value-card"><i class="fa-solid fa-building-shield text-mint-500"></i><h3 data-cms="about.facilities.title">Modern Facilities</h3><p data-cms="about.facilities.text">State-of-the-art equipment in a calming, spa-inspired environment.</p></div>
+        <div class="bg-white rounded-lg p-8 shadow-sm">
+          <h3 class="font-head text-xl mb-5">Opening Hours</h3>
+          <div id="contact-hours"></div>
+          <a href="#reservation" class="btn btn-dark w-full mt-8">Reserve a Table</a>
         </div>
-        <ul class="space-y-3 font-accent text-sm text-slateink/75">
-          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500 shrink-0"></i> Certified & continuously trained professionals</li>
-          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500 shrink-0"></i> Friendly, patient-first staff culture</li>
-          <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500 shrink-0"></i> Hospital-grade sterilization on every visit</li>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-charcoald text-white pt-16 pb-8 px-5 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+      <div class="md:col-span-2">
+        <p class="font-head text-2xl tracking-[0.15em] mb-4" style="color:var(--c-gold-light)" data-site-name>AURELIA</p>
+        <p id="footer-blurb" class="text-sm text-white/55 leading-relaxed max-w-xs">A modern culinary journey rooted in seasonal ingredients, quiet craftsmanship, and gracious hospitality since 2011.</p>
+        <div class="flex gap-2.5 mt-6">
+          <a href="#" class="social-icon" data-social="facebook" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 8h2V5h-2a4 4 0 0 0-4 4v2H9v3h2v7h3v-7h2.2l.8-3H14V9a1 1 0 0 1 1-1Z"/></svg></a>
+          <a href="#" class="social-icon" data-social="instagram" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" class="social-icon" data-social="tiktok" aria-label="TikTok"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4v9.5a3 3 0 1 1-2.4-2.94M14 4a5 5 0 0 0 5 5"/></svg></a>
+          <a href="#" class="social-icon" data-social="twitter" aria-label="X (Twitter)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 4 16 16M20 4 4 20"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <p class="font-body text-xs uppercase tracking-widest text-white/40 mb-4">Quick Links</p>
+        <ul class="space-y-2.5 text-sm text-white/70">
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#menu" class="hover:text-white">Menu</a></li>
+          <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
+          <li><a href="#testimonials" class="hover:text-white">Testimonials</a></li>
+          <li><a href="#reservation" class="hover:text-white">Reservation</a></li>
         </ul>
       </div>
-    </div>
-
-    <!-- Counters -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6" data-aos="fade-up">
-      <div class="stat-card"><p class="counter font-heading font-bold text-3xl sm:text-4xl text-gradient" data-target="18000">0</p><span>Patients Served</span></div>
-      <div class="stat-card"><p class="font-heading font-bold text-3xl sm:text-4xl text-gradient"><span class="counter" data-target="16">0</span>+</p><span>Years of Experience</span></div>
-      <div class="stat-card"><p class="font-heading font-bold text-3xl sm:text-4xl text-gradient"><span class="counter" data-target="42000">0</span></p><span>Treatments Completed</span></div>
-      <div class="stat-card"><p class="font-heading font-bold text-3xl sm:text-4xl text-gradient"><span class="counter" data-target="99">0</span>%</p><span>Satisfaction Rate</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= MEET OUR DENTISTS ================= -->
-<section id="dentists" class="py-16 sm:py-20 lg:py-32 section-alt relative">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Our Team</span>
-      <h2 class="section-title mt-3">Meet Our Dentists</h2>
-      <p class="mt-4 text-slateink/65 leading-relaxed">Board-certified specialists dedicated to precision, comfort, and beautiful, lasting results.</p>
-    </div>
-
-    <div id="dentists-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7"></div>
-  </div>
-</section>
-<!-- ================= SERVICES ================= -->
-<section id="services" class="py-16 sm:py-20 lg:py-32 bg-white">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">What We Offer</span>
-      <h2 class="section-title mt-3">Comprehensive Dental Services</h2>
-      <p class="mt-4 text-slateink/65 leading-relaxed">From routine cleanings to full smile transformations — advanced care for every stage of your dental journey.</p>
-    </div>
-    <div id="services-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-  </div>
-</section>
-
-<!-- ================= WHY CHOOSE US ================= -->
-<section id="why-us" class="py-16 sm:py-20 lg:py-32 section-alt">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Why Choose Us</span>
-      <h2 class="section-title mt-3">Care Built Around You</h2>
-    </div>
-    <div id="why-us-grid" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5"></div>
-  </div>
-</section>
-
-<!-- ================= BEFORE & AFTER ================= -->
-<section id="before-after" class="py-16 sm:py-20 lg:py-32 bg-white">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Real Results</span>
-      <h2 class="section-title mt-3">Before & After Transformations</h2>
-      <p class="mt-4 text-slateink/65 leading-relaxed">Drag the slider to see the difference our treatments make.</p>
-    </div>
-
-    <div class="flex flex-wrap justify-center gap-3 mb-10" id="ba-filters">
-      <button class="ba-filter-btn active" data-filter="all">All</button>
-      <button class="ba-filter-btn" data-filter="veneers">Veneers</button>
-      <button class="ba-filter-btn" data-filter="whitening">Whitening</button>
-      <button class="ba-filter-btn" data-filter="braces">Braces</button>
-      <button class="ba-filter-btn" data-filter="makeover">Smile Makeover</button>
-    </div>
-
-    <div id="ba-grid" class="grid md:grid-cols-2 gap-8"></div>
-  </div>
-</section>
-
-<!-- ================= GALLERY ================= -->
-<section id="gallery" class="py-16 sm:py-20 lg:py-32 section-alt">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
-      <span class="eyebrow">Take a Look Inside</span>
-      <h2 class="section-title mt-3">Our Clinic Gallery</h2>
-    </div>
-    <div class="flex flex-wrap justify-center gap-3 mb-10" id="gallery-filters">
-      <button class="ba-filter-btn active" data-filter="all">All</button>
-      <button class="ba-filter-btn" data-filter="interior">Interior</button>
-      <button class="ba-filter-btn" data-filter="procedures">Procedures</button>
-      <button class="ba-filter-btn" data-filter="team">Team</button>
-      <button class="ba-filter-btn" data-filter="patients">Patients</button>
-    </div>
-    <div id="masonry-grid" class="masonry"></div>
-  </div>
-</section>
-
-<!-- Lightbox -->
-<div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-charcoal/90 backdrop-blur p-6">
-  <button id="lightbox-close" class="absolute top-6 right-6 text-white/80 hover:text-white text-2xl"><i class="fa-solid fa-xmark"></i></button>
-  <img id="lightbox-img" src="" alt="" class="max-h-[85vh] max-w-full rounded-2xl shadow-2xl scale-95 transition-transform duration-300" />
-</div>
-
-<!-- ================= TESTIMONIALS ================= -->
-<section id="testimonials" class="py-16 sm:py-20 lg:py-32 bg-white overflow-hidden">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Patient Love</span>
-      <h2 class="section-title mt-3">What Our Patients Say</h2>
-      <div class="flex items-center justify-center gap-2 mt-4">
-        <span class="text-amber-400 text-lg"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
-        <span class="text-sm text-slateink/60 font-accent">4.9 out of 5 · 1,200+ Google Reviews</span>
+      <div>
+        <p class="font-body text-xs uppercase tracking-widest text-white/40 mb-4">Newsletter</p>
+        <p id="footer-newsletter-blurb" class="text-sm text-white/55 mb-4">Seasonal menus &amp; exclusive invitations, straight to your inbox.</p>
+        <form data-newsletter-form novalidate class="flex gap-2">
+          <input type="email" required placeholder="Email address" class="bg-white/5 border border-white/15 px-3 py-2.5 text-sm outline-none flex-1 placeholder:text-white/40 rounded">
+          <button class="btn btn-gold !py-2.5 !px-4">Join</button>
+        </form>
       </div>
     </div>
-    <div class="swiper testimonial-swiper">
-      <div class="swiper-wrapper" id="testimonial-wrapper"></div>
-    </div>
-    <div class="flex justify-center gap-3 mt-8">
-      <button class="swiper-btn-prev testimonial-prev"><i class="fa-solid fa-arrow-left"></i></button>
-      <button class="swiper-btn-prev testimonial-next"><i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-  </div>
-</section>
-<!-- ================= BOOKING ================= -->
-<section id="booking" class="py-16 sm:py-20 lg:py-32 relative overflow-hidden hero-gradient">
-  <div class="floating-shape shape-2" style="opacity:.5"></div>
-  <div class="mx-auto max-w-5xl px-5 lg:px-8 relative">
-    <div class="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
-      <span class="eyebrow">Get Started</span>
-      <h2 class="section-title mt-3">Book Your Appointment</h2>
-      <p class="mt-4 text-slateink/65 leading-relaxed">Fill out the form below and our team will confirm your visit within one business hour.</p>
-    </div>
-
-    <form id="booking-form" class="glass-panel rounded-4xl shadow-soft p-6 sm:p-10 grid sm:grid-cols-2 gap-5" data-aos="fade-up" data-aos-delay="100" novalidate>
-      <div class="sm:col-span-1 form-group">
-        <label for="fullname">Full Name *</label>
-        <input type="text" id="fullname" name="fullname" required placeholder="Juan Dela Cruz" />
-      </div>
-      <div class="sm:col-span-1 form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required placeholder="you@example.com" />
-      </div>
-      <div class="sm:col-span-1 form-group">
-        <label for="mobile">Mobile Number *</label>
-        <input type="tel" id="mobile" name="mobile" required placeholder="+63 900 000 0000" />
-      </div>
-      <div class="sm:col-span-1 form-group">
-        <label for="dentist">Preferred Dentist</label>
-        <select id="dentist" name="dentist">
-          <option>No preference</option>
-          <option>Dr. Amara Reyes</option>
-          <option>Dr. Daniel Cruz</option>
-          <option>Dr. Maya Lin</option>
-          <option>Dr. Elias Navarro</option>
-        </select>
-      </div>
-      <div class="sm:col-span-1 form-group">
-        <label for="pdate">Preferred Date *</label>
-        <input type="date" id="pdate" name="pdate" required />
-      </div>
-      <div class="sm:col-span-1 form-group">
-        <label for="ptime">Preferred Time *</label>
-        <input type="time" id="ptime" name="ptime" required />
-      </div>
-      <div class="sm:col-span-2 form-group">
-        <label for="service">Service Needed</label>
-        <select id="service" name="service">
-          <option>General Consultation</option>
-          <option>Teeth Cleaning</option>
-          <option>Teeth Whitening</option>
-          <option>Dental Implants</option>
-          <option>Invisalign / Orthodontics</option>
-          <option>Cosmetic Dentistry / Smile Makeover</option>
-          <option>Emergency Dental Care</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="sm:col-span-2 form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about your concern..."></textarea>
-      </div>
-      <div class="sm:col-span-2 flex items-center justify-between flex-wrap gap-4 mt-2">
-        <p class="text-xs text-slateink/50 flex items-center gap-2"><i class="fa-solid fa-lock text-mint-500"></i> Your information is kept confidential.</p>
-        <button type="submit" class="btn-primary"><i class="fa-regular fa-calendar-check"></i> Book Appointment</button>
-      </div>
-    </form>
-  </div>
-</section>
-
-<!-- Booking Success Modal -->
-<div id="success-modal" class="fixed inset-0 z-[70] hidden items-center justify-center bg-charcoal/50 backdrop-blur-sm p-5">
-  <div class="bg-white rounded-4xl shadow-2xl p-10 max-w-sm w-full text-center relative modal-pop">
-    <button id="success-close" class="absolute top-5 right-5 text-slateink/40 hover:text-slateink"><i class="fa-solid fa-xmark"></i></button>
-    <div class="w-20 h-20 mx-auto rounded-full bg-mint-50 flex items-center justify-center mb-5">
-      <svg class="checkmark" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="24" fill="none"/><path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-    </div>
-    <h3 class="font-heading font-bold text-xl text-charcoal mb-2">Appointment Requested!</h3>
-    <p class="text-sm text-slateink/60">Thank you — our team will contact you shortly to confirm your visit.</p>
-    <button id="success-ok" class="btn-primary mt-6 w-full justify-center">Done</button>
-  </div>
-</div>
-
-<!-- ================= PROMOTIONS ================= -->
-<section id="promotions" class="py-16 sm:py-20 lg:py-32 bg-white">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Special Offers</span>
-      <h2 class="section-title mt-3">Current Promotions</h2>
-    </div>
-    <div id="promo-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-  </div>
-</section>
-
-<!-- ================= INSURANCE PARTNERS ================= -->
-<section class="py-16 section-alt">
-  <div class="mx-auto max-w-6xl px-5 lg:px-8 text-center">
-    <span class="eyebrow">Trusted By</span>
-    <h3 class="font-heading font-semibold text-2xl text-charcoal mt-2 mb-10">Insurance Partners We Accept</h3>
-    <div id="insurance-grid" class="grid grid-cols-3 sm:grid-cols-6 gap-6 items-center"></div>
-  </div>
-</section>
-
-<!-- ================= FACILITIES ================= -->
-<section id="facilities" class="py-16 sm:py-20 lg:py-32 bg-white">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Comfort & Convenience</span>
-      <h2 class="section-title mt-3">Clinic Facilities</h2>
-    </div>
-    <div id="facilities-grid" class="grid sm:grid-cols-3 lg:grid-cols-5 gap-6"></div>
-  </div>
-</section>
-
-<!-- ================= INFECTION CONTROL / VIRTUAL TOUR ================= -->
-<section class="py-16 sm:py-20 lg:py-32 section-alt">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-    <div data-aos="fade-right">
-      <span class="eyebrow">Your Safety First</span>
-      <h2 class="section-title mt-3">Infection Control & Sterilization</h2>
-      <p class="mt-4 text-slateink/65 leading-relaxed">Every instrument is sterilized using hospital-grade autoclave systems. Treatment rooms are disinfected between every patient, and our team follows strict CDC and WHO infection-control protocols.</p>
-      <ul class="mt-6 space-y-3 font-accent text-sm text-slateink/75">
-        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500"></i> Autoclave sterilization for all instruments</li>
-        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500"></i> Single-use disposables where applicable</li>
-        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-mint-500"></i> HEPA air filtration in treatment rooms</li>
-      </ul>
-    </div>
-    <div class="relative rounded-5xl overflow-hidden shadow-soft aspect-video group cursor-pointer" data-aos="fade-left" id="virtual-tour-trigger">
-      <img src="https://images.unsplash.com/photo-1583912267550-d6c2ac3196c0?auto=format&fit=crop&w=900&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Virtual clinic tour"/>
-      <div class="absolute inset-0 bg-charcoal/30 flex items-center justify-center">
-        <div class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform">
-          <i class="fa-solid fa-play text-sky-500 text-2xl ml-1"></i>
-        </div>
-      </div>
-      <span class="absolute bottom-5 left-5 text-white font-accent font-medium text-sm bg-charcoal/40 backdrop-blur px-3 py-1.5 rounded-full">360° Virtual Clinic Tour</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================= AWARDS / CSR ================= -->
-<section class="py-16 sm:py-20 lg:py-32 bg-white">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14">
-    <div data-aos="fade-up">
-      <span class="eyebrow">Recognition</span>
-      <h2 class="font-heading font-bold text-2xl lg:text-3xl text-charcoal mt-3 mb-6">Awards & Certifications</h2>
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div class="value-card"><i class="fa-solid fa-award text-sky-400"></i><h3>Best Dental Clinic 2024</h3><p>City Health & Wellness Awards</p></div>
-        <div class="value-card"><i class="fa-solid fa-certificate text-mint-500"></i><h3>ISO 9001 Certified</h3><p>Quality Management Systems</p></div>
-        <div class="value-card"><i class="fa-solid fa-medal text-sky-400"></i><h3>Top Patient Satisfaction</h3><p>Healthcare Excellence Board</p></div>
-        <div class="value-card"><i class="fa-solid fa-shield-halved text-mint-500"></i><h3>Accredited Facility</h3><p>National Dental Association</p></div>
-      </div>
-    </div>
-    <div data-aos="fade-up" data-aos-delay="100">
-      <span class="eyebrow">Giving Back</span>
-      <h2 class="font-heading font-bold text-2xl lg:text-3xl text-charcoal mt-3 mb-6">Community Outreach</h2>
-      <div class="rounded-4xl overflow-hidden shadow-soft mb-5"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dcf?auto=format&fit=crop&w=800&q=80" class="w-full h-56 object-cover" alt="Community dental outreach program"/></div>
-      <p class="text-slateink/65 leading-relaxed text-sm">We provide free dental missions to underserved communities twice a year and partner with local schools for oral health education programs.</p>
-    </div>
-  </div>
-</section>
-<!-- ================= FAQ ================= -->
-<section id="faqs" class="py-16 sm:py-20 lg:py-32 section-alt">
-  <div class="mx-auto max-w-3xl px-5 lg:px-8">
-    <div class="text-center mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Got Questions?</span>
-      <h2 class="section-title mt-3">Frequently Asked Questions</h2>
-    </div>
-    <div id="faq-accordion" class="space-y-4"></div>
-
-    <div class="mt-12 text-center rounded-4xl glass-panel p-6" data-aos="fade-up">
-      <p class="text-sm font-accent font-medium text-slateink/70 mb-2"><i class="fa-solid fa-robot text-sky-400"></i> Still have questions?</p>
-      <p class="text-xs text-slateink/50">Chat with our AI assistant using the chat bubble in the bottom-right corner — available 24/7.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PATIENT FORMS & FINANCING ================= -->
-<section class="py-16 sm:py-20 lg:py-32 bg-white">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-14">
-    <div class="value-card !p-8" data-aos="fade-up">
-      <i class="fa-solid fa-file-arrow-down text-sky-400"></i>
-      <h3 class="text-lg">Patient Forms</h3>
-      <p class="mb-5">Save time at your visit — download and complete your forms in advance.</p>
-      <div class="space-y-2">
-        <a href="#" class="download-link"><i class="fa-regular fa-file-lines"></i> New Patient Registration <i class="fa-solid fa-download ml-auto"></i></a>
-        <a href="#" class="download-link"><i class="fa-regular fa-file-lines"></i> Medical History Form <i class="fa-solid fa-download ml-auto"></i></a>
-        <a href="#" class="download-link"><i class="fa-regular fa-file-lines"></i> Consent for Treatment <i class="fa-solid fa-download ml-auto"></i></a>
-      </div>
-    </div>
-    <div class="value-card !p-8" data-aos="fade-up" data-aos-delay="100">
-      <i class="fa-solid fa-hand-holding-dollar text-mint-500"></i>
-      <h3 class="text-lg">Financing & Payment Options</h3>
-      <p class="mb-5">Flexible plans to make quality dental care accessible to everyone.</p>
-      <ul class="space-y-2 text-sm text-slateink/70">
-        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-mint-500"></i> 0% interest installment plans</li>
-        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-mint-500"></i> HMO & insurance coordination</li>
-        <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-mint-500"></i> Credit card & digital wallet payments</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BLOG ================= -->
-<section id="blog" class="py-16 sm:py-20 lg:py-32 section-alt">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Dental Insights</span>
-      <h2 class="section-title mt-3">Latest From Our Blog</h2>
-    </div>
-    <div id="blog-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-  </div>
-</section>
-
-<!-- ================= NEWSLETTER ================= -->
-<section class="py-16 bg-white">
-  <div class="mx-auto max-w-3xl px-5 lg:px-8 text-center glass-panel rounded-4xl p-6 sm:p-10 shadow-soft" data-aos="zoom-in">
-    <i class="fa-regular fa-envelope text-3xl text-sky-400 mb-4"></i>
-    <h3 class="font-heading font-bold text-2xl text-charcoal mb-2">Stay in the Loop</h3>
-    <p class="text-sm text-slateink/60 mb-6">Get dental tips, promo alerts, and clinic news straight to your inbox.</p>
-    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-      <input type="email" required placeholder="Enter your email" class="flex-1 px-5 py-3 rounded-full border border-slateink/10 focus:outline-none focus:ring-2 focus:ring-sky-300 text-sm" />
-      <button type="submit" class="btn-primary justify-center">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="py-16 sm:py-20 lg:py-32 section-alt">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-      <span class="eyebrow">Get In Touch</span>
-      <h2 class="section-title mt-3">Visit or Contact Us</h2>
-    </div>
-
-    <div class="grid lg:grid-cols-5 gap-6 lg:gap-8">
-      <div class="lg:col-span-2 space-y-3 sm:space-y-4" data-aos="fade-right">
-        <div class="contact-card"><i class="fa-solid fa-location-dot text-sky-400"></i><div><h4>Clinic Address</h4><p data-cms="contact.address">128 Wellness Avenue, Suite 300, San Francisco, CA 94105</p></div></div>
-        <div class="contact-card"><i class="fa-solid fa-phone text-mint-500"></i><div><h4>Phone</h4><p><a href="tel:+15551234567" class="hover:text-sky-500" data-cms-tel="contact.phone" data-cms="contact.phone">+1 (555) 123-4567</a></p></div></div>
-        <div class="contact-card"><i class="fa-solid fa-mobile-screen text-sky-400"></i><div><h4>Mobile</h4><p><a href="tel:+15559876543" class="hover:text-sky-500" data-cms-tel="contact.mobile" data-cms="contact.mobile">+1 (555) 987-6543</a></p></div></div>
-        <div class="contact-card"><i class="fa-regular fa-envelope text-mint-500"></i><div><h4>Email</h4><p><a href="mailto:hello@radiancedental.example" class="hover:text-sky-500" data-cms-mailto="contact.email" data-cms="contact.email">hello@radiancedental.example</a></p></div></div>
-        <div class="contact-card"><i class="fa-regular fa-clock text-sky-400"></i><div><h4>Clinic Hours</h4><p data-cms="contact.hours">Mon–Fri: 9AM–6PM · Sat: 9AM–2PM</p></div></div>
-        <div class="contact-card"><i class="fa-solid fa-triangle-exclamation text-rose-400"></i><div><h4>Emergency Contact</h4><p><a href="tel:+15551119999" class="hover:text-sky-500" data-cms-tel="contact.emergencyPhone" data-cms="contact.emergencyPhone">+1 (555) 111-9999</a> (24/7)</p></div></div>
-        <div class="contact-card"><i class="fa-solid fa-square-parking text-mint-500"></i><div><h4>Parking</h4><p data-cms="contact.parkingNote">Free basement parking for all patients</p></div></div>
-        <div class="flex gap-3 pt-2">
-          <a href="#" class="chip-btn" data-cms-href="social.messenger"><i class="fa-brands fa-facebook-messenger text-sky-500"></i> Messenger</a>
-          <a href="#" class="chip-btn" data-cms-href="social.whatsapp"><i class="fa-brands fa-whatsapp text-mint-500"></i> WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="lg:col-span-3 space-y-5" data-aos="fade-left">
-        <div class="rounded-4xl overflow-hidden shadow-soft h-64 sm:h-72 lg:h-full min-h-[280px] sm:min-h-[320px]">
-          <iframe title="Clinic location map" id="map-embed" data-cms-src="contact.mapEmbedUrl" src="https://www.google.com/maps?q=San+Francisco+dental+clinic&output=embed" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ================= FOOTER ================= -->
-<footer class="bg-charcoal text-white/80 pt-16 sm:pt-20 pb-24 sm:pb-8 relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-5 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
-    <div>
-      <a href="#home" class="flex items-center gap-2 font-heading font-bold text-xl text-white mb-4">
-        <span class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sky-300 to-mint-300 flex items-center justify-center"><i class="fa-solid fa-tooth text-white"></i></span>
-        Radiance <span class="font-light text-white/50">Dental</span>
-      </a>
-      <p class="text-sm text-white/50 leading-relaxed mb-5" data-cms="footer.tagline">Premium dental care delivered with compassion, precision, and modern technology.</p>
-      <div class="flex gap-3">
-        <a href="#" class="footer-social" data-cms-href="social.facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" class="footer-social" data-cms-href="social.instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="footer-social" data-cms-href="social.tiktok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#" class="footer-social" data-cms-href="social.youtube"><i class="fa-brands fa-youtube"></i></a>
-      </div>
-    </div>
-    <div>
-      <h4 class="text-white font-heading font-semibold mb-4">Quick Links</h4>
-      <ul class="space-y-2.5 text-sm text-white/50">
-        <li><a href="#about" class="hover:text-mint-300 transition">About Us</a></li>
-        <li><a href="#dentists" class="hover:text-mint-300 transition">Meet Our Dentists</a></li>
-        <li><a href="#gallery" class="hover:text-mint-300 transition">Gallery</a></li>
-        <li><a href="#testimonials" class="hover:text-mint-300 transition">Testimonials</a></li>
-        <li><a href="#blog" class="hover:text-mint-300 transition">Blog</a></li>
-        <li><a href="#booking" class="hover:text-mint-300 transition">Book Appointment</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-white font-heading font-semibold mb-4">Services</h4>
-      <ul class="space-y-2.5 text-sm text-white/50">
-        <li><a href="#services" class="hover:text-mint-300 transition">Cosmetic Dentistry</a></li>
-        <li><a href="#services" class="hover:text-mint-300 transition">Dental Implants</a></li>
-        <li><a href="#services" class="hover:text-mint-300 transition">Invisalign & Orthodontics</a></li>
-        <li><a href="#services" class="hover:text-mint-300 transition">Teeth Whitening</a></li>
-        <li><a href="#services" class="hover:text-mint-300 transition">Pediatric Dentistry</a></li>
-        <li><a href="#services" class="hover:text-mint-300 transition">Emergency Care</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="text-white font-heading font-semibold mb-4">Newsletter</h4>
-      <p class="text-sm text-white/50 mb-4">Subscribe for dental tips & exclusive offers.</p>
-      <form class="flex gap-2" id="footer-newsletter">
-        <input type="email" required placeholder="Email address" class="flex-1 min-w-0 px-4 py-2.5 rounded-full bg-white/10 border border-white/10 text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-sky-300" />
-        <button class="w-10 h-10 shrink-0 rounded-full bg-gradient-to-r from-sky-400 to-mint-400 flex items-center justify-center"><i class="fa-solid fa-arrow-right text-sm"></i></button>
-      </form>
-      <p class="text-xs text-white/30 mt-5">🇺🇸 English &nbsp;|&nbsp; 🇵🇭 <a href="#" class="underline hover:text-mint-300">Filipino</a></p>
-    </div>
-  </div>
-
-  <div class="mx-auto max-w-7xl px-5 lg:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
-    <p>&copy; <span id="year"></span> Radiance Dental Studio. All rights reserved.</p>
-    <div class="flex gap-5">
-      <a href="#" class="hover:text-mint-300 transition">Privacy Policy</a>
-      <a href="#" class="hover:text-mint-300 transition">Terms & Conditions</a>
-      <a href="#" class="hover:text-mint-300 transition">Sitemap</a>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-3 pt-6 text-xs text-white/35">
+      <p id="footer-copyright">&copy; 2026 AURELIA Restaurant. All rights reserved.</p>
+      <p id="footer-address-line">412 Marchmont Lane, New York, NY &middot; +1 (555) 284-9910</p>
     </div>
   </div>
 </footer>
 
-<!-- ================= FLOATING ACTION BUTTONS ================= -->
-<div class="fixed z-40 bottom-24 right-4 sm:bottom-6 sm:right-6 flex flex-col items-end gap-3" id="floating-actions">
-  <div id="fab-menu" class="flex flex-col items-end gap-3 mb-1">
-    <a href="tel:+15551234567" class="fab-btn bg-sky-500" title="Call Us"><i class="fa-solid fa-phone"></i></a>
-    <a href="#" class="fab-btn bg-[#0084ff]" title="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
-    <a href="#" class="fab-btn bg-[#25D366]" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="#booking" class="fab-btn bg-gradient-to-br from-sky-400 to-mint-400" title="Book Appointment"><i class="fa-regular fa-calendar-check"></i></a>
-  </div>
-  <button id="fab-toggle" class="fab-btn bg-charcoal w-14 h-14 text-lg"><i class="fa-solid fa-plus" id="fab-icon"></i></button>
-</div>
-
 <!-- Back to top -->
-<button id="back-to-top" class="fixed z-40 bottom-24 left-4 sm:bottom-6 sm:left-6 w-11 h-11 rounded-full bg-white shadow-soft flex items-center justify-center text-slateink/60 opacity-0 pointer-events-none transition-all hover:text-sky-500">
-  <i class="fa-solid fa-arrow-up"></i>
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<!-- Chatbot Widget -->
-<div id="chatbot" class="fixed z-40 bottom-[172px] left-4 right-4 sm:bottom-24 sm:left-6 sm:right-auto hidden w-auto sm:w-80 max-w-full sm:max-w-[85vw] rounded-4xl shadow-soft overflow-hidden bg-white border border-slateink/5">
-  <div class="bg-gradient-to-r from-sky-400 to-mint-400 p-4 flex items-center gap-3 text-white">
-    <i class="fa-solid fa-robot text-lg"></i>
-    <div><p class="font-heading font-semibold text-sm">Radiance Assistant</p><p class="text-[11px] opacity-80">Online · Replies instantly</p></div>
-    <button id="chatbot-close" class="ml-auto text-white/80 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
-  </div>
-  <div id="chatbot-body" class="p-4 h-64 overflow-y-auto space-y-3 text-sm bg-ivory"></div>
-  <form id="chatbot-form" class="flex items-center gap-2 p-3 border-t border-slateink/5">
-    <input id="chatbot-input" type="text" placeholder="Ask about our services..." class="flex-1 px-4 py-2 rounded-full bg-slateink/5 text-sm focus:outline-none" />
-    <button type="submit" class="w-9 h-9 rounded-full bg-sky-400 text-white flex items-center justify-center shrink-0"><i class="fa-solid fa-paper-plane text-xs"></i></button>
-  </form>
-</div>
-<button id="chatbot-toggle" class="fixed z-40 bottom-6 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:bottom-6" style="display:none;"></button>
+<!-- Toast -->
+<div id="toast" class="text-sm px-5 py-3 rounded-full"></div>
 
-<!-- Sticky mobile contact bar -->
-<div id="mobile-sticky-bar" class="fixed sm:hidden bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-t border-slateink/10 grid grid-cols-3 text-center py-2.5 px-2">
-  <a href="tel:+15551234567" class="flex flex-col items-center gap-1 text-slateink/70 text-[11px]"><i class="fa-solid fa-phone text-sky-500"></i>Call</a>
-  <a href="#contact" class="flex flex-col items-center gap-1 text-slateink/70 text-[11px]"><i class="fa-solid fa-location-dot text-mint-500"></i>Directions</a>
-  <a href="#booking" class="flex flex-col items-center gap-1 text-slateink/70 text-[11px]"><i class="fa-regular fa-calendar-check text-sky-500"></i>Book</a>
-</div>
-
-<!-- Virtual Tour Modal -->
-<div id="tour-modal" class="fixed inset-0 z-[70] hidden items-center justify-center bg-charcoal/80 backdrop-blur-sm p-5">
-  <div class="bg-white rounded-4xl shadow-2xl max-w-2xl w-full p-3 relative modal-pop">
-    <button id="tour-close" class="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-white shadow-soft flex items-center justify-center text-slateink/60 hover:text-slateink z-10"><i class="fa-solid fa-xmark"></i></button>
-    <div class="aspect-video rounded-3xl overflow-hidden bg-charcoal flex items-center justify-center text-white/60 text-sm">
-      Virtual tour video placeholder — embed your 360°/video tour here.
-    </div>
-  </div>
-</div>
-
-<!-- ================= SCRIPTS ================= -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="js/data.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
